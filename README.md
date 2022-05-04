@@ -1,8 +1,8 @@
 # MikroLeo
 ## 4-bit Didactic Microcomputer
 
-The project is in the final testing stage.
-This project was developed mainly for educational purposes.
+The project is in the final testing stage.  
+This project was developed mainly for educational purposes.  
 Soon, the project files will be here!
 
 Main Features:
