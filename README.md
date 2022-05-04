@@ -20,6 +20,10 @@ Main Features:
 - no microcode
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
+-------------------------------------------------
+
+<img src="https://user-images.githubusercontent.com/60040866/166625998-3a3e175f-9511-4136-9589-0866a762c20d.jpg" width="40%" height="40%">
+
 
 -------------------------------------------------
 Licensed under CERN-OHL-S v2 or any later version
