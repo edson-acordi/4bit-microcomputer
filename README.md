@@ -21,10 +21,12 @@ Main Features:
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
 -------------------------------------------------
+Breadboard:  
+<img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
 
-<img src="https://user-images.githubusercontent.com/60040866/166625998-3a3e175f-9511-4136-9589-0866a762c20d.jpg" width="40%" height="40%">
+PCB (Kicad 3D viewer):  
+<img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="70%" height="70%">  
 
-
--------------------------------------------------
+-------------------------------------------
 Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
