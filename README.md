@@ -27,6 +27,9 @@ Breadboard:
 PCB (Kicad 3D viewer):  
 <img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
 
+PCB Prototype:  
+<img src="https://user-images.githubusercontent.com/60040866/166628285-47b3ee24-fd4e-49f8-9bca-21af1cec307d.jpg" width="55%" height="55%">  
+
 -------------------------------------------
 Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
