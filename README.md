@@ -20,6 +20,16 @@ Main Features:
 - no microcode
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
+
+# MikroLeo Architecture  
+...  
+
+# Intruction Set  
+... 
+
+# Documentation  
+...  
+
 -------------------------------------------------
 Breadboard:  
 <img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
@@ -31,5 +41,25 @@ PCB Prototype:
 <img src="https://user-images.githubusercontent.com/60040866/166628285-47b3ee24-fd4e-49f8-9bca-21af1cec307d.jpg" width="55%" height="55%">  
 
 -------------------------------------------
+
+# Development stages
+
+- Bibliographic research
+- Architecture definition
+- Circuit design
+- Circuit simulation
+- Prototype assembly on breadboard
+- Printed circuit board design
+- Prototype assembly on PCB
+
+
+# History and Motivation
+This project was something that I always wanted to do, and some sources of inspiration can be seen at:  
+
+http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html  
+https://www.bigmessowires.com/nibbler/  
+https://gigatron.io/  
+
+# License
 Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
