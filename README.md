@@ -60,6 +60,10 @@ http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html
 https://www.bigmessowires.com/nibbler/  
 https://gigatron.io/  
 
+# Acknowledgements  
+
+The authors would like to thank the IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
+
 # License
 Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
