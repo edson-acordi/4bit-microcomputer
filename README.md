@@ -64,6 +64,13 @@ https://gigatron.io/
 
 The authors would like to thank the IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
 
+# Authors  
+
+Edson Junior Acordi  
+Matheus Fernando Tasso  
+Carlos Daniel de Souza Nunes  
+
 # License
+
 Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
