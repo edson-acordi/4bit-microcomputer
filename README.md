@@ -13,7 +13,10 @@ Main Features:
    * step
    * 3MHz (precise time)
    * adjustable clock speed
-- no mpu/mcu or complex chips
+- no MPU/MCU or complex chips
 - RISC architecture
 - no microcode
+- Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
+
+
