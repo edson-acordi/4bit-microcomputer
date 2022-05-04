@@ -59,6 +59,7 @@ This project was something that I always wanted to do, and some sources of inspi
 http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html  
 https://www.bigmessowires.com/nibbler/  
 https://gigatron.io/  
+https://eater.net/  
 
 # Acknowledgements  
 
