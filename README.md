@@ -2,6 +2,8 @@
 ## 4-bit Didactic Microcomputer
 
 The project is in the final testing stage.
+This project was developed mainly for educational purposes.
+Soon, the project files will be here!
 
 Main Features:
 - 2k x 16 ROM (up to 4k)
