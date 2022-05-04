@@ -1,1 +1,2 @@
-# 4bit-micro-computer
+# MikroLeo
+# 4-bit Didactic Microcomputer
