@@ -19,4 +19,6 @@ Main Features:
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
 
-
+-------------------------------------------------
+Licensed under CERN-OHL-S v2 or any later version
+#### https://ohwr.org/cern_ohl_s_v2.txt
