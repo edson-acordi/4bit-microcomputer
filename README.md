@@ -72,5 +72,8 @@ Carlos Daniel de Souza Nunes
 
 # License
 
-Licensed under CERN-OHL-S v2 or any later version
+Hardware: Licensed under CERN-OHL-S v2 or any later version
 #### https://ohwr.org/cern_ohl_s_v2.txt
+
+Software: Licensed under GNU GPL v3  
+#### https://www.gnu.org/licenses/gpl-3.0.txt
