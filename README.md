@@ -78,3 +78,6 @@ https://ohwr.org/cern_ohl_s_v2.txt
 
 Software: Licensed under GNU GPL v3  
 https://www.gnu.org/licenses/gpl-3.0.txt
+
+Documentation: Licensed under CC BY-SA 4.0  
+https://creativecommons.org/licenses/by-sa/4.0/
