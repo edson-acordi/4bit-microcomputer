@@ -26,7 +26,7 @@ Main Features:
 
 # Intruction Set  
 
-<img src="https://user-images.githubusercontent.com/60040866/167204731-90cd0c0e-c29a-49bc-8cfe-85326740a78d.png" width="100%" height="100%">  
+<img src="https://user-images.githubusercontent.com/60040866/167204731-90cd0c0e-c29a-49bc-8cfe-85326740a78d.png" width="80%" height="80%">  
 
 # Documentation  
 ...  
