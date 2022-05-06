@@ -25,7 +25,8 @@ Main Features:
 ...  
 
 # Intruction Set  
-... 
+
+<img src="https://user-images.githubusercontent.com/60040866/167204731-90cd0c0e-c29a-49bc-8cfe-85326740a78d.png" width="100%" height="100%">  
 
 # Documentation  
 ...  
@@ -60,6 +61,7 @@ http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html
 https://www.bigmessowires.com/nibbler/  
 https://gigatron.io/  
 https://eater.net/  
+https://apollo181.wixsite.com/apollo181/specification  
 
 # Acknowledgements  
 
