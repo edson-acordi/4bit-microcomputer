@@ -1,5 +1,7 @@
-# MikroLeo
+#  MikroLeo
 ## 4-bit Didactic Microcomputer
+
+<!-- This is a comment -->
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
@@ -69,17 +71,17 @@ The authors would like to thank the IFPR (Instituto Federal do Paraná) and CNPq
 
 # Authors  
 
-Edson Junior Acordi  
+>Edson Junior Acordi  
 Matheus Fernando Tasso  
 Carlos Daniel de Souza Nunes  
 
 # License
 
-Hardware: Licensed under CERN-OHL-S v2 or any later version  
+**Hardware:** Licensed under CERN-OHL-S v2 or any later version  
 https://ohwr.org/cern_ohl_s_v2.txt
 
-Software: Licensed under GNU GPL v3  
+**Software:** Licensed under GNU GPL v3  
 https://www.gnu.org/licenses/gpl-3.0.txt
 
-Documentation: Licensed under CC BY-SA 4.0  
+**Documentation:** Licensed under CC BY-SA 4.0  
 https://creativecommons.org/licenses/by-sa/4.0/
