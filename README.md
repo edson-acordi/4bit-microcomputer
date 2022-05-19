@@ -5,6 +5,7 @@
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
+It is a fully open-source hardware and software.
 Soon, the project files will be here!
 
 Main Features:
@@ -64,6 +65,9 @@ https://www.bigmessowires.com/nibbler/
 https://gigatron.io/  
 https://eater.net/  
 https://apollo181.wixsite.com/apollo181/specification  
+
+# Dedication
+This project is dedicated to my son, Leonardo P. Acordi  
 
 # Acknowledgements  
 
