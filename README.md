@@ -5,7 +5,7 @@
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
-It is a fully open-source hardware and software.
+It is a fully open-source hardware and software project.  
 Soon, the project files will be here!
 
 Main Features:
