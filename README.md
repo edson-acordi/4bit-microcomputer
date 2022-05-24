@@ -42,7 +42,7 @@ Main Features:
 **Two Flags**  
 Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
 
-`CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB instruction if it results in a borrow.  
+`CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB/CMP instruction if it results in a borrow.  
 `ZF` - Zero Flag - It is affected by all operations that change the contents of ACC. It is Set (ZF=1) if the result of the last operation was zero.    
 
 **Addressing Modes**  
