@@ -3,7 +3,7 @@
 
 Loop:
 	LDI RB,0   ; Loads RB with operand
-	LDA RB     ; Loads contents of RB into the Accumulator.
+	LDA RB     ; Loads contents of RB into the Accumulator
 	CMP ACC,RB ; Compare ACC with RB
 	JPZ VAL1   ; If ACC equal to RB, jump to the specified label 
 	JPI ERRO   ; If not, signalize that an error occurred
