@@ -25,16 +25,23 @@ Main Features:
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture  
-...  
+<img src="https://user-images.githubusercontent.com/60040866/169953214-34b667ca-379c-4391-9c50-69db36c3133b.png" width="85%" height="85%">
 
 # Intruction Set  
 
 <img src="https://user-images.githubusercontent.com/60040866/167204731-90cd0c0e-c29a-49bc-8cfe-85326740a78d.png" width="80%" height="80%">  
 
 # Documentation  
-...  
+`ACC` - Acumulator  
+`RA` - General purpose Register (also used for addressing)  
+`RB` - General purpose Register (also used for addressing)  
+`RC` - Used for addressing  
+`CF` - Carry Flag  
+`ZF` - Zero Flag  
+...
 
 -------------------------------------------------
+# Pictures
 Breadboard:  
 <img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
 
@@ -48,13 +55,14 @@ PCB Prototype:
 
 # Development stages
 
-- Bibliographic research
-- Architecture definition
-- Circuit design
-- Circuit simulation
-- Prototype assembly on breadboard
-- Printed circuit board design
-- Prototype assembly on PCB
+- [x] - Bibliographic research
+- [x] - Architecture definition
+- [x] - Circuit design
+- [x] - Circuit simulation
+- [x] - Prototype assembly on breadboard
+- [x] - Printed circuit board design
+- [x] - Prototype assembly on PCB
+- [ ] - Final tests
 
 
 # History and Motivation
