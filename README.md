@@ -89,7 +89,8 @@ PCB Prototype:
 
 
 # History and Motivation
-This project was something that I always wanted to do, and some sources of inspiration can be seen at:  
+Since the time I took an 8086 assembly language programming course, this project has been something that I have always wanted to do.  
+Some sources of inspiration can be seen at:  
 
 http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html  
 https://www.bigmessowires.com/nibbler/  
@@ -98,7 +99,7 @@ https://eater.net/
 https://apollo181.wixsite.com/apollo181/specification  
 
 # Dedication
-This project is dedicated to my son, Leonardo P. Acordi  
+This project is dedicated to my son, Leonardo Pimentel Acordi  
 
 # Acknowledgements  
 
