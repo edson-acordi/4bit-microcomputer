@@ -32,12 +32,18 @@ Main Features:
 <img src="https://user-images.githubusercontent.com/60040866/167204731-90cd0c0e-c29a-49bc-8cfe-85326740a78d.png" width="80%" height="80%">  
 
 # Documentation  
-`ACC` - Acumulator  
+
+<ins>MikroLeo has four Registers</ins>  
+`ACC` - Acumulator - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM  
 `RA` - General purpose Register (also used for addressing)  
 `RB` - General purpose Register (also used for addressing)  
-`RC` - Register used for addressing  
-`CF` - Carry Flag  
-`ZF` - Zero Flag  
+`RC` - Special purpose Register used for addressing  
+
+<ins> Two Flags </ins>  
+Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
+
+`CF` - Carry Flag - It is affected by ADD Instruction if it produces a carry or by SUB instruction if it results in a borrow.  
+`ZF` - Zero Flag - It is affected by all operations that change the contents of ACC.  
 ...
 
 -------------------------------------------------
