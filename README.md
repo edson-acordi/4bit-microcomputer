@@ -35,7 +35,7 @@ Main Features:
 `ACC` - Acumulator  
 `RA` - General purpose Register (also used for addressing)  
 `RB` - General purpose Register (also used for addressing)  
-`RC` - Used for addressing  
+`RC` - Register used for addressing  
 `CF` - Carry Flag  
 `ZF` - Zero Flag  
 ...
