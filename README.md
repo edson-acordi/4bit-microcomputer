@@ -33,17 +33,34 @@ Main Features:
 
 # Documentation  
 
-<ins>MikroLeo has four Registers</ins>  
-`ACC` - Acumulator - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM  
-`RA` - General purpose Register (also used for addressing)  
-`RB` - General purpose Register (also used for addressing)  
-`RC` - Special purpose Register used for addressing  
+**MikroLeo has four Registers**  
+`ACC` - Acumulator - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
+`RA` - General purpose Register (also used for addressing).  
+`RB` - General purpose Register (also used for addressing).  
+`RC` - Special purpose Register used for addressing.  
 
-<ins> Two Flags </ins>  
+**Two Flags**  
 Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
 
-`CF` - Carry Flag - It is affected by ADD Instruction if it produces a carry or by SUB instruction if it results in a borrow.  
-`ZF` - Zero Flag - It is affected by all operations that change the contents of ACC.  
+`CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB instruction if it results in a borrow.  
+`ZF` - Zero Flag - It is affected by all operations that change the contents of ACC. It is Set (ZF=1) if the result of the last operation was zero.    
+
+**Addressing Modes**  
+
+<ins> *Immediate* </ins>  
+
+In immediate addressing, the operand (n) is located after the opcode, being part of the Instruction itself.  
+
+Example:  
+LDI ACC,1  
+LDI ACC,0xA  
+NAND ACC,0  
+OUTA 0xF  
+CMP ACC,0  
+SUB ACC,1  
+ADD ACC,5  
+
+
 ...
 
 -------------------------------------------------
