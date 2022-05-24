@@ -23,11 +23,12 @@ VAL3:
 	LDI RB,0xF ; Last test
 	LDA RB
 	CMP ACC,RB ; Compare ACC with RB
-	JPZ END    ; If ACC is equal to RB, jumps to the specified label 
-	OUTA 1     ; If not, signalize that an error occurred
+	JPZ END    ; If ACC is equal to RB, jumps to the specified label   
 	JPI ERRO   ; Jumps to the error label
 END:
 	JPI Loop   ; Tests ok, so, repeat it
 ERRO:
-	JPI ERRO   ; Hangs the execution
+        OUTA 1     ; Signalize that an error occurred
+ERRO2:
+	JPI ERRO2  ; Hangs the execution
 	
