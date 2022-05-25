@@ -27,7 +27,7 @@ Soon, the project files will be here!
 # MikroLeo Architecture  
 <img src="https://user-images.githubusercontent.com/60040866/169953214-34b667ca-379c-4391-9c50-69db36c3133b.png" width="85%" height="85%">
 
-# Intruction Set  
+# Instruction Set  
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
