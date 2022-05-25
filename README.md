@@ -55,11 +55,14 @@ Examples:
 ```asm
 LDI ACC,1    ;Loads the value of the operand into the accumulator ACC.
 LDI ACC,0xA  
-NAND ACC,0   ;Performs the NAND operation between the accumulator and the operand value and stores the result in the accumulator.
+NAND ACC,0   ;Performs the NAND operation between the accumulator and the operand value and stores the result
+             ;in the accumulator.
 OUTA 0xF     ;Sends the value of the operand to the output port OUTA.
 CMP ACC,0    ;Performs the comparison between the accumulator and the operand.
-SUB ACC,1    ;Performs the subtraction between the accumulator and the operand and stores the result in the accumulator.
-ADD ACC,5    ;Performs the addition between the accumulator and the operand and stores the result in the accumulator.
+SUB ACC,1    ;Performs the subtraction between the accumulator and the operand and stores the result in the
+             ;accumulator.
+ADD ACC,5    ;Performs the addition between the accumulator and the operand and stores the result in the
+             ;accumulator.
 ```
 <ins> *Register Indirect + Absolute* </ins>
 
