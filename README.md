@@ -83,6 +83,7 @@ LOOP:
   LDI RC,3       ;Loads the value of the operand into the Register RC.
   STW ACC,@0x21  ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:MAddr:LAddr, in this case, RC:MAddr:LAddr = 321h.
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
   JPI LOOP       ;Jumps to the specified label
 ```
 Example 2:  
@@ -91,7 +92,8 @@ LOOP:
   LDI RC,3       ;Loads the value of the operand into the Register RC.
   LDW ACC,@0x21  ;Loads the contents of the RAM address pointed by RC:MAddr:LAddr in the
                  ;accumulator, in this case, RC:MAddr:LAddr = 321h.
-  JPI LOOP  
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  JPI LOOP
 ```
 
 ...
