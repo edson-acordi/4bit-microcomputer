@@ -34,7 +34,7 @@ Soon, the project files will be here!
 # Documentation  
 
 **- MikroLeo has four Registers**  
-`ACC` - Acumulator (4 bit) - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
+`ACC` - Accumulator (4 bit) - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
 `RA` - 4 bit General purpose Register (also used for addressing).  
 `RB` - 4 bit General purpose Register (also used for addressing).  
 `RC` - 4 bit Special purpose Register used for addressing.  
