@@ -8,7 +8,7 @@ This project was developed mainly for educational purposes.
 It is a fully open-source hardware and software project.  
 Soon, the project files will be here!
 
-Main Features:
+**Main Features**:
 - 2k x 16 ROM (up to 4k)
 - 2k x 4 RAM (up to 4k)
 - 4 Output Ports (16 outputs)
@@ -33,19 +33,19 @@ Main Features:
 
 # Documentation  
 
-**MikroLeo has four Registers**  
-`ACC` - Acumulator - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
-`RA` - General purpose Register (also used for addressing).  
-`RB` - General purpose Register (also used for addressing).  
-`RC` - Special purpose Register used for addressing.  
+**- MikroLeo has four Registers**  
+`ACC` - Acumulator (4 bit) - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
+`RA` - 4 bit General purpose Register (also used for addressing).  
+`RB` - 4 bit General purpose Register (also used for addressing).  
+`RC` - 4 bit Special purpose Register used for addressing.  
 
-**Two Flags**  
+**- Two Flags**  
 Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
 
 `CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB/CMP instruction if it results in a borrow.  
 `ZF` - Zero Flag - It is affected by all operations that change the contents of ACC. It is Set (ZF=1) if the result of the last operation was zero.    
 
-**Addressing Modes**  
+**- Addressing Modes**  
 
 <ins> *Immediate* </ins>  
 
@@ -66,15 +66,16 @@ ADD ACC,5    ;Performs the addition between the accumulator and the operand and 
 ```
 <ins> *Register Indirect + Absolute* </ins>
 
-In this addressing mode, the `RC` Register points to the high address (11:8). The medium (MAddr) and low (LAddr) nibble of the instruction, point to the medium and low address, respectively.  
+In this addressing mode, the `RC` Register points to the high address (b11:b8). The medium (MAddr) and low (LAddr) nibble of the instruction, point to the medium and low address, respectively.  
 
-The final address is composed by RC:MAddr:LAddr.  
+The final address is composed by `RC:MAddr:LAddr`.  
 
 For example, if:  
-RC=3  
-MAddr=2  
-LAddr=1  
-
+```
+RC = 3  
+MAddr = 2  
+LAddr = 1  
+```
 The address to be accessed is 321h.  
 
 Example 1:  
