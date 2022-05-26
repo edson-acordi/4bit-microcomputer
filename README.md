@@ -1,9 +1,11 @@
-#  MikroLeo
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-80%25-brightgreen>
+
+#  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
 <br />
 <br />
 
-## 4-bit Didactic Microcomputer
+## 4-bit Didactic Microcomputer ##
 
 <!-- This is a comment -->
 
@@ -29,7 +31,7 @@ Soon, the project files will be here!
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture  
-<img src="https://user-images.githubusercontent.com/60040866/169953214-34b667ca-379c-4391-9c50-69db36c3133b.png" width="85%" height="85%">
+<img src="https://user-images.githubusercontent.com/60040866/170422604-c3ba4214-685e-40a0-a868-4cb948382655.png" width="85%" height="85%">
 
 # Instruction Set  
 
@@ -125,7 +127,7 @@ PCB Prototype:
 - [x] - Prototype assembly on breadboard
 - [x] - Printed circuit board design
 - [x] - Prototype assembly on PCB
-- [ ] - Final tests
+- [ ] - Final Tests
 
 
 # History and Motivation
