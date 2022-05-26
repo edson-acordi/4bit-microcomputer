@@ -1,4 +1,8 @@
 #  MikroLeo
+<img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
+<br />
+<br />
+
 ## 4-bit Didactic Microcomputer
 
 <!-- This is a comment -->
