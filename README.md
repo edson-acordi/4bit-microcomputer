@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-80%25-brightgreen>
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-80%25-green>
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
@@ -30,14 +30,14 @@ Soon, the project files will be here!
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
 
-# MikroLeo Architecture  
+# MikroLeo Architecture #
 <img src="https://user-images.githubusercontent.com/60040866/170423097-8096352b-737d-4b8a-93d4-19edffec8095.png" width="85%" height="85%">
 
-# Instruction Set  
+# Instruction Set #
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
-# Documentation  
+# Documentation #
 
 **- MikroLeo has four Registers**  
 `ACC` - Accumulator (4 bit) - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
@@ -106,7 +106,11 @@ LOOP:
 ...
 
 -------------------------------------------------
-# Pictures
+# Pictures #
+
+Circuit Simulation:  
+<img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
+
 Breadboard:  
 <img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
 
@@ -118,7 +122,7 @@ PCB Prototype:
 
 -------------------------------------------
 
-# Development stages
+# Development stages #
 
 - [x] - Bibliographic research
 - [x] - Architecture definition
@@ -130,7 +134,7 @@ PCB Prototype:
 - [ ] - Final Tests
 
 
-# History and Motivation
+# History and Motivation #
 Since the time I took an 8086 assembly language programming course, this project has been something that I have always wanted to do.  
 Some sources of inspiration can be seen at:  
 
@@ -140,20 +144,20 @@ https://gigatron.io/
 https://eater.net/  
 https://apollo181.wixsite.com/apollo181/specification  
 
-# Dedication
-This project is dedicated to my son, Leonardo Pimentel Acordi  
+# Dedication #
+This project is dedicated to my son, Leonardo Pimentel Acordi.  
 
-# Acknowledgements  
+# Acknowledgements #
 
 The authors would like to thank the IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
 
-# Authors  
+# Authors #
 
 >Edson Junior Acordi  
 Matheus Fernando Tasso  
 Carlos Daniel de Souza Nunes  
 
-# License
+# License #
 
 **Hardware:** Licensed under CERN-OHL-S v2 or any later version  
 https://ohwr.org/cern_ohl_s_v2.txt
