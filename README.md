@@ -31,7 +31,7 @@ Soon, the project files will be here!
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture  
-<img src="https://user-images.githubusercontent.com/60040866/170422604-c3ba4214-685e-40a0-a868-4cb948382655.png" width="85%" height="85%">
+<img src="https://user-images.githubusercontent.com/60040866/170423097-8096352b-737d-4b8a-93d4-19edffec8095.png" width="85%" height="85%">
 
 # Instruction Set  
 
