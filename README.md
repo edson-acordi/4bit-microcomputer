@@ -68,7 +68,6 @@ CF  ACC
 As the value zero is written to ACC, ZF=1.
 ```
 
-
 **- Addressing Modes**  
 
 <ins> *Immediate* </ins>  
@@ -102,7 +101,19 @@ LAddr = 1
 ```
 The address to be accessed is 321h.  
 
-Example 1:  
+Example 1:
+```asm
+  LDI RC,1       ;Loads the value of the operand into the Register RC.
+  OUTA @0xF4     ;Sends the contents of the RAM address pointed to by RC:MAddr:LAddr to output port A,
+                 ;in this case, RC:MAddr:LAddr = 1F4h
+```
+Example 2:
+```asm
+  LDI RC,3       ;Loads the value of the operand into the Register RC.
+  ADD ACC,@0xFC  ;Sum the contents of the RAM address pointed to by RC:MAddr:LAddr with ACC and stores
+                 ;it in ACC.
+```
+Example 3:  
 ```asm
 LOOP:  
   LDI RC,3       ;Loads the value of the operand into the Register RC.
@@ -111,7 +122,7 @@ LOOP:
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
   JPI LOOP       ;Jumps to the specified label
 ```
-Example 2:  
+Example 4:  
 ```asm
 LOOP:  
   LDI RC,3       ;Loads the value of the operand into the Register RC.
@@ -120,6 +131,7 @@ LOOP:
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
   JPI LOOP
 ```
+
 
 ...
 
