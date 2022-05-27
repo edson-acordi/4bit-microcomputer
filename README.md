@@ -49,7 +49,25 @@ Soon, the project files will be here!
 Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
 
 `CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB/CMP instruction if it results in a borrow.  
-`ZF` - Zero Flag - It is affected by all operations that change the contents of ACC. It is Set (ZF=1) if the result of the last operation was zero.    
+`ZF` - Zero Flag - It is affected by operations that modify the contents of the ACC and by CMP instruction. It is Set (ZF=1) if the result of the last operation was zero.    
+
+Example of how CF and ZF are Set:  
+```asm
+LDI ACC,1  
+ADD ACC,0xF  
+```
+This code does it,
+```
+   0001
++  1111
+-------  
+ 1 0000  
+ ↓   ↓  
+CF  ACC
+
+As the value zero is written to ACC, ZF=1.
+```
+
 
 **- Addressing Modes**  
 
@@ -108,7 +126,7 @@ LOOP:
 -------------------------------------------------
 # Pictures #
 
-Circuit Simulation:  
+Circuit Simulation (Made with the "Digital" Software, developed by Helmut Neemann):  
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
 Breadboard:  
