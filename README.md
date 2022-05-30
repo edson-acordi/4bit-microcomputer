@@ -11,8 +11,8 @@
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
-It is a fully open-source hardware and software project.  
-Soon, the project files will be here!
+It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
+Soon, the project files will be here!  
 
 **Main Features**:
 - 2k x 16 ROM (up to 4k)
