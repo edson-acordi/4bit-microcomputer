@@ -143,7 +143,8 @@ Example 4:
 ```asm
   LDI RC,2       ;Loads the value of the operand into the Register RC.
   CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
-  JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is RC:MAddr:LAddr = 234h.
+  JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
+                 ;RC:MAddr:LAddr = 234h.
 ```
 Example 5:  
 ```asm
