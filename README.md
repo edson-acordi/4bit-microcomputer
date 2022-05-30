@@ -107,6 +107,16 @@ Example 7:
 ADD ACC,5    ;Performs the addition between the accumulator and the operand and stores the
              ;result in the accumulator.
 ```
+
+<ins> *Register Direct* </ins>  
+
+In this mode, the operand is one of the three registers (RC, RB, RA). Thus, the contents of the lower and medium nibble of the instruction (b7:b4, b3:b0) do not matter.  
+
+Example 1:  
+```asm
+LDA RA    ;Loads the value of the operand into the accumulator ACC.
+```
+
 <ins> *Register Indirect + Absolute* </ins>
 
 In this addressing mode, the `RC` Register points to the high address (b11:b8). The medium (MAddr) and low (LAddr) nibble of the instruction, point to the medium and low address, respectively.  
