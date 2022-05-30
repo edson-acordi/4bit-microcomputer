@@ -1,4 +1,4 @@
-### Summary of the main features of the phyton assembler for the MikroLeo:  
+### Summary of the main features of the Python Assembler for the MikroLeo:  
 
 @ is used to indicate a RAM address. 
 
