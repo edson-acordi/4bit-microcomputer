@@ -1,1 +1,1 @@
-This folder holds some programs in asm code for test with MikroLeo.
+This folder holds some programs in asm code for the MikroLeo.
