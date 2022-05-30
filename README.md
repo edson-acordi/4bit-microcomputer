@@ -110,11 +110,23 @@ ADD ACC,5    ;Performs the addition between the accumulator and the operand and 
 
 <ins> *Register Direct* </ins>  
 
-In this mode, the operand is one of the three registers (RC, RB, RA). Thus, the contents of the lower and medium nibble of the instruction (b7:b4, b3:b0) do not matter.  
+In this mode, the operand must be one of the four registers (ACC, RC, RB, RA). Thus, the contents of the lower and medium nibble of the instruction (MAdrr, b7:b4 and LAddr, b3:b0) do not matter. Note that in the LDR instruction, the operand (ACC) is implied. LDR stands for load the Register Rx with ACC, being x={A,B,C}. In the LDA instruction, the operand must be one of the three registers (RC, RB, RA). LDA stands for load the accumulator with one of Rx Registers.    
 
 Example 1:  
 ```asm
-LDA RA    ;Loads the value of the operand into the accumulator ACC.
+  LDR RA     ;Loads the value of the accumulator ACC into the RA register.
+```
+Example 2:  
+```asm
+  LDR RB     ;Loads the value of the accumulator ACC into the RB register.
+```
+Example 3: 
+```asm
+  LDA RA     ;Loads the value of the Register RA into the accumulator ACC.
+```
+Example 4: 
+```asm
+  LDA RC     ;Loads the value of the Register RC into the accumulator ACC.
 ```
 
 <ins> *Register Indirect + Absolute* </ins>
@@ -186,12 +198,12 @@ LOOP:
 
 <ins> *Register Indirect* </ins>
 
-In this addressing mode, the `RC` Register points to the high address (b11:b8). Likewise, the 'RB' Register points to the medium Address (MA) while the RA Register points to the low Address (LA).  
+In this addressing mode, the `RC` Register points to the high address (b11:b8). Likewise, the 'RB' Register points to the medium Address (MA) while the RA Register points to the low Address (LA). Note that the contents of the lower and medium nibble of the instruction (MAddr, b7:b4 and LAddr, b3:b0) do not matter.  
 
 The final address is composed by `RC:RB:RA`.  
 
 For example, if:  
-```
+```Thus, the contents of the lower and medium nibble of the instruction (b7:b4, b3:b0) do not matter.
 RC = 3  
 RB = 2  
 RA = 1  
