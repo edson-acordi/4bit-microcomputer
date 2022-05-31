@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-80%25-green>
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-92%25-green>
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
@@ -39,7 +39,7 @@ Note that some buffers are used to allow viewing the contents of registers at an
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
-# Documentation #
+# Basic Documentation #
 
 **- MikroLeo has four Registers**  
 `ACC` - Accumulator (4 bit) - Stores the result of logical and arithmetic operations. Moreover, ACC stores data that is read from or written to RAM.  
@@ -110,7 +110,7 @@ ADD ACC,5    ;Performs the addition between the accumulator and the operand and 
 
 <ins> *Register Direct* </ins>  
 
-In this mode, the operand must be one of the four registers (ACC, RC, RB, RA). Thus, the contents of the lower and medium nibble of the instruction (MAdrr, b7:b4 and LAddr, b3:b0) do not matter. Note that in the LDR instruction, the operand (ACC) is implied. LDR stands for load the Register Rx with ACC, being x={A,B,C}. In the LDA instruction, the operand must be one of the three registers (RC, RB, RA). LDA stands for load the accumulator with one of Rx Registers.    
+In this mode, the operand must be one of the four registers (ACC, RC, RB, RA). Thus, the contents of the lower and medium nibble of the instruction (MAdrr, b7:b4 and LAddr, b3:b0) do not matter. Note that in the LDR instruction, the operand (ACC) is implied. LDR stands for load the Register Rx with ACC, being x={A,B,C}. In the LDA instruction, the operand must be one of the three registers (RC, RB, RA). LDA stands for load the accumulator with one of Rx Registers. Note that in register direct addressing mode, data can be read from or written to a register.  
 
 Example 1:  
 ```asm
