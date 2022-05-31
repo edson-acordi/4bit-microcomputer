@@ -309,8 +309,10 @@ PCB Prototype:
 
 
 # History and Motivation #
-Since the time I took an 8086 assembly language programming course, this project has been something that I have always wanted to do. 
+Since the time I took an 8086 assembly language programming course, this project has been something that I have always wanted to do.  
 The project started in 2020, and the first usable version was completed on April 20, 2020.  
+Initially, the development of the project used the Logisim-Evolution software, and later it was migrated to the Digital software (Helmut Neemann).  
+
 Some sources of inspiration can be seen at:  
 
 http://www.sinaptec.alomar.com.ar/2018/03/computadora-de-4-bits-capitulo-1.html  
