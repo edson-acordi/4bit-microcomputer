@@ -282,7 +282,7 @@ LOOP:
 -------------------------------------------------
 # Pictures #
 
-Circuit Simulation (Made with the "Digital" Software, developed by Helmut Neemann):  
+Simulation of the Mikroleo circuit (Made with the "Digital" Software, developed by Helmut Neemann):  
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
 Breadboard:  
