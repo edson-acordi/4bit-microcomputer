@@ -23,7 +23,7 @@ Soon, the project files will be here!
 - Harvard Architecture
 - 3 execution modes:
    * step
-   * 3MHz (precise time)
+   * 3MHz (precise time base)
    * adjustable clock speed
 - No MPU/MCU or complex chips
 - No microcode
@@ -38,6 +38,18 @@ Note that some buffers are used to allow viewing the contents of registers at an
 # Instruction Set #
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
+
+## Instruction Set Detailed ##
+
+**LDI - Load with Immediate**
+
+ 
+| OPCODE  |      Instruction    |
+| ------- | ------------------- |
+| 0x00    | LDI ACC,n           |
+| 0x10    | LDI RA,n            |
+
+...
 
 # Basic Documentation #
 
