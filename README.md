@@ -44,10 +44,15 @@ Note that some buffers are used to allow viewing the contents of registers at an
 **LDI - Load with Immediate**
 
  
-| OPCODE  |      Instruction    |
-| ------- | ------------------- |
-| 0x00    | LDI ACC,n           |
-| 0x10    | LDI RA,n            |
+| Instruction Word | Modifier + OPCODE |      Instruction    | Affected Flags |
+| -----------------|------------------ | ------------------- |----------------|
+| 0x000n           |0x00               | LDI ACC,n           |ZF              |
+| 0x100n           |0x10               | LDI RA,n            |-               |
+| 0x200n           |0x20               | LDI RB,n            |-               |
+| 0x300n           |0x30               | LDI RC,n            |-               |
+
+Exemples:
+
 
 ...
 
