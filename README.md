@@ -41,8 +41,20 @@ Note that some buffers are used to allow viewing the contents of registers at an
 
 ## Instruction Set explanation and examples ##
 
-**LDI - Load with Immediate**
+In binary, the Instruction Word is coded as,
 
+ROMH:  
+| <sub>b15</sub> | <sub>b14</sub> | <sub>b13</sub>| <sub>b12</sub>| <sub>b11</sub> | <sub>b10</sub> | <sub>b9</sub> | <sub>b8</sub> 
+|---------|-----|----|----|------|------|------|------|
+|<sub>MICRO2_IN</sub>|<sub>AMODE</sub>|<sub>MOD1</sub>|<sub>MOD0</sub>|<sub>MICRO3</sub>|<sub>MICRO2</sub>|<sub>MICRO1</sub>|<sub>MICRO0</sub>|
+
+ROML:  
+| <sub>b7</sub> | <sub>b6</sub> |  <sub>b5</sub> | <sub>b4</sub> | <sub>b3</sub> | <sub>b2</sub> | <sub>b1</sub> | <sub>b0</sub> |  
+|------|------|------|------|--------|--------|--------|--------|  
+<sub>MAddr3</sub>|<sub>MAddr2</sub>|<sub>MAddr1</sub>|<sub>MAddr0</sub>|<sub>Operand3</sub>|<sub>Operand2</sub>|<sub>Operand1</sub>|<sub>Operand0</sub>|  
+
+### ###
+**LDI - Load with Immediate**
  
 | Instruction Word | AMODE + Modifier + OPCODE |      Instruction     | Affected Flags |
 |------------------|---------------------------|----------------------|----------------|
@@ -70,19 +82,6 @@ Here,
 <ins> *Second Nibble* </ins> => MAddr [b7:b4] = 0  
 <ins> *Third Nibble* </ins> => MICRO [b11:b8] = 0  
 <ins> *Most significant Nibble* </ins> => HiNB [b15:b12] = 1  
-
-In binary, the Instruction Word for LDI RA,6 is coded as,
-
-ROMH:  
-| <sub>b15</sub> | <sub>b14</sub> | <sub>b13</sub>| <sub>b12</sub>| <sub>b11</sub> | <sub>b10</sub> | <sub>b9</sub> | <sub>b8</sub> 
-|---------|-----|----|----|------|------|------|------|
-|<sub>MICRO2_IN</sub>|<sub>AMODE</sub>|<sub>MOD1</sub>|<sub>MOD0</sub>|<sub>MICRO3</sub>|<sub>MICRO2</sub>|<sub>MICRO1</sub>|<sub>MICRO0</sub>|
-
-ROML:  
-| <sub>b7</sub> | <sub>b6</sub> |  <sub>b5</sub> | <sub>b4</sub> | <sub>b3</sub> | <sub>b2</sub> | <sub>b1</sub> | <sub>b0</sub> |  
-|------|------|------|------|--------|--------|--------|--------|  
-<sub>MAddr3</sub>|<sub>MAddr2</sub>|<sub>MAddr1</sub>|<sub>MAddr0</sub>|<sub>Operand3</sub>|<sub>Operand2</sub>|<sub>Operand1</sub>|<sub>Operand0</sub>|  
-
 
 ...
 
