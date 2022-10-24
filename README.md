@@ -53,7 +53,7 @@ ROML (Least significant byte of program memory):
 |------|------|------|------|--------|--------|--------|--------|  
 <sub>MAddr3</sub>|<sub>MAddr2</sub>|<sub>MAddr1</sub>|<sub>MAddr0</sub>|<sub>Operand3</sub>|<sub>Operand2</sub>|<sub>Operand1</sub>|<sub>Operand0</sub>|  
 
-Note: b15 = bit15 ... b0 = bit0
+$\text{\small\textcolor{purple}{- Note: b15 = bit15 ... b0 = bit0}}$
 
 ### ###
 **LDI - Load with Immediate**
