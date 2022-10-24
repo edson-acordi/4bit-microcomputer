@@ -35,27 +35,47 @@ Note that some buffers are used to allow viewing the contents of registers at an
 
 <img src="https://user-images.githubusercontent.com/60040866/170423097-8096352b-737d-4b8a-93d4-19edffec8095.png" width="85%" height="85%">
 
-# Instruction Set #
+# The MikroLeo Instruction Set #
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
-## Instruction Set Detailed ##
+## Instruction Set explanation and examples ##
 
 **LDI - Load with Immediate**
 
  
-| Instruction Word | Modifier + OPCODE |      Instruction     | Affected Flags |
-|------------------|-------------------|----------------------|----------------|
-| 0x000n           |0x00               | LDI ACC,n            |ZF              |
-| 0x100n           |0x10               | LDI RA,n             |-               |
-| 0x200n           |0x20               | LDI RB,n             |-               |
-| 0x300n           |0x30               | LDI RC,n             |-               |
+| Instruction Word | AMODE + Modifier + OPCODE |      Instruction     | Affected Flags |
+|------------------|---------------------------|----------------------|----------------|
+| 0x000n           |0x00                       | LDI ACC,n            |ZF              |
+| 0x100n           |0x10                       | LDI RA,n             |-               |
+| 0x200n           |0x20                       | LDI RB,n             |-               |
+| 0x300n           |0x30                       | LDI RC,n             |-               |
 
 ***Examples:***
 
-| **Instruction Word** | **Instruction** |              **Description**            |
+| **Instruction Word** | **Instruction** |              **Comment**            |
 |------------------|-------------|-|
-| 0x0005           | LDI ACC,5   | Loads ACC with operand |
+| 0x0005           | LDI ACC,5   | Load ACC with operand |
+| 0x1006           | LDI RA,6    | Load RA with operand |
+| 0x2007           | LDI RB,7    | Load RB with operand |
+| 0x300a           | LDI RC,10   | Load ACC with operand |
+
+The Instruction Word, for example, for LDI RA,6 is coded as,  
+
+0x1006  
+
+Here,  
+
+<ins> *Least significant Nibble* </ins> => Operand [b3:b0] = 6  
+<ins> *Second Nibble* </ins> => MAddr [b7:b4] = 0  
+<ins> *Third Nibble* </ins> => MICRO [b11:b8] = 0  
+<ins> *Most significant Nibble* </ins> => HiNB [b15:b12] = 1  
+
+In binary, the Instruction Word for LDI RA,6 is coded as,
+
+| <sub>b15</sub> | <sub>b14</sub> | <sub>b13</sub>| <sub>b12</sub>| <sub>b11</sub> | <sub>b10</sub> | <sub>b9</sub> | <sub>b8</sub> | <sub>b7</sub> | <sub>b6</sub> |  <sub>b5</sub> | <sub>b4</sub> | <sub>b3</sub> | <sub>b2</sub> | <sub>b1</sub> | <sub>b0</sub> |  
+|---------|-----|----|----|------|------|------|------|------|------|------|------|--------|--------|--------|--------|  
+|<sub>MICRO2_IN</sub>|<sub>AMODE</sub>|<sub>MOD1</sub>|<sub>MOD0</sub>|<sub>MICRO3</sub>|<sub>MICRO2</sub>|<sub>MICRO1</sub>|<sub>MICRO0</sub>|<sub>MAddr3</sub>|<sub>MAddr2</sub>|<sub>MAddr1</sub>|<sub>MAddr0</sub>|<sub>Operand3</sub>|<sub>Operand2</sub>|<sub>Operand1</sub>|<sub>Operand0</sub>|  
 
 
 ...
