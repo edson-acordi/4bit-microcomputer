@@ -56,12 +56,12 @@ ROML:
 ### ###
 **LDI - Load with Immediate**
  
-| Instruction Word | AMODE + Modifier + OPCODE |      Instruction     | Affected Flags |
-|------------------|---------------------------|----------------------|----------------|
-| 0x000n           |0x00                       | LDI ACC,n            |ZF              |
-| 0x100n           |0x10                       | LDI RA,n             |-               |
-| 0x200n           |0x20                       | LDI RB,n             |-               |
-| 0x300n           |0x30                       | LDI RC,n             |-               |
+| Instruction Word | AMODE:Modifier:OPCODE |      Instruction     | Affected Flags |
+|------------------|-----------------------|----------------------|----------------|
+| 0x000n           |0x00                   | LDI ACC,n            |ZF              |
+| 0x100n           |0x10                   | LDI RA,n             |-               |
+| 0x200n           |0x20                   | LDI RB,n             |-               |
+| 0x300n           |0x30                   | LDI RC,n             |-               |
 
 ***Examples:***
 
