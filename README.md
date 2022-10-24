@@ -75,12 +75,12 @@ $\text{\small\textcolor{purple}{- Note: b15 = bit15 ... b0 = bit0}}$
 | 0x300a           | LDI RC,10   | Load ACC with operand |
 
 The Instruction Word, for example, for LDI RA,6 is coded as,
-```
- 0x1006  
-   ┆┆┆└--> Least significant Nibble => Operand[b3:b0] = 6  
-   ┆┆└---> Second Nibble => MAddr[b7:b4] = 0  
-   ┆└----> Third Nibble => MICRO[b11:b8] = 0  
-   └-----> Most significant Nibble => HiNB[b15:b12] = 1  
+```asm
+0x1006
+  ┆┆┆└--> Least significant Nibble => Operand[b3:b0] = 6
+  ┆┆└---> Second Nibble => MAddr[b7:b4] = 0
+  ┆└----> Third Nibble => MICRO[b11:b8] = 0
+  └-----> Most significant Nibble => HiNB[b15:b12] = 1
 ```
 
 ...
