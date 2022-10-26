@@ -53,21 +53,21 @@ ROML (Least significant byte of program memory):
 |------|------|------|------|--------|--------|--------|--------|  
 <sub>MAddr3</sub>|<sub>MAddr2</sub>|<sub>MAddr1</sub>|<sub>MAddr0</sub>|<sub>Operand3</sub>|<sub>Operand2</sub>|<sub>Operand1</sub>|<sub>Operand0</sub>|  
 
-$\text{\small\textcolor{purple}{- Note: b15 = bit15 ... b0 = bit0}}$
+$\text{\small\textcolor{brown}{- Note: b15 = bit15 ... b0 = bit0}}$
 
 ### ###
 **LDI - Load with Immediate**
- 
-| Instruction Word | AMODE:Modifier:OPCODE |      Instruction     | Affected Flags |
+
+| <sub>Instruction Word</sub> | <sub>AMODE:Modifier:OPCODE</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x000n           |0x00                   | LDI ACC,n            |ZF              |
 | 0x100n           |0x10                   | LDI RA,n             |-               |
 | 0x200n           |0x20                   | LDI RB,n             |-               |
 | 0x300n           |0x30                   | LDI RC,n             |-               |
 
-***Examples:***
+<ins>Examples:</ins>
 
-| **Instruction Word** | **Instruction** |              **Comment**            |
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|-------------|-|
 | 0x0005           | LDI ACC,5   | Load ACC with operand |
 | 0x1006           | LDI RA,6    | Load RA with operand |
@@ -77,10 +77,10 @@ $\text{\small\textcolor{purple}{- Note: b15 = bit15 ... b0 = bit0}}$
 The Instruction Word, for example, for LDI RA,6 is coded as,
 ```asm
 0x1006
-  ┆┆┆└--> Least significant Nibble => Operand[b3:b0] = 6
-  ┆┆└---> Second Nibble => MAddr[b7:b4] = 0
-  ┆└----> Third Nibble => MICRO[b11:b8] = 0
-  └-----> Most significant Nibble => HiNB[b15:b12] = 1
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 6
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 0
+  └─────> Most significant Nibble => HiNB[b15:b12] = 1
 ```
 
 ...
