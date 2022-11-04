@@ -394,4 +394,10 @@ https://ohwr.org/cern_ohl_s_v2.txt
 https://www.gnu.org/licenses/gpl-3.0.txt
 
 **Documentation:** Licensed under CC BY-SA 4.0  
-https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/  
+
+#### __ ####
+#### Visitor count
+![Visitor Count](https://profile-counter.glitch.me/{edson-acordi}/count.svg)
+
+
