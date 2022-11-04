@@ -372,7 +372,10 @@ This project is dedicated to my son, Leonardo Pimentel Acordi.
 
 # Acknowledgements #
 
-The authors would like to thank the IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
+### The authors would like to thank:  
+- The IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
+
+- The RENESAS (https://www.renesas.com/br/en) for sending me memory samples for tests with MikroLeo.
 
 # Authors #
 
