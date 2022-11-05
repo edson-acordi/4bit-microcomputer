@@ -11,6 +11,7 @@
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
+
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
 Soon, the project files will be here!  
 
@@ -387,6 +388,10 @@ Carlos Daniel de Souza Nunes
 
 # License #
 
+***Note:***  
+I don't expect this project to be used commercially, so I decided to use the GNU GPL license for software to ensure that it is always free of charge, contributing, promoting, and disseminating the essential knowledge. As such, all code derived from it will also be open source!
+Likewise, for the hardware, the CERN-OHL-S license was used.
+
 **Hardware:** Licensed under CERN-OHL-S v2 or any later version  
 https://ohwr.org/cern_ohl_s_v2.txt
 
@@ -398,6 +403,5 @@ https://creativecommons.org/licenses/by-sa/4.0/
 
 ---
 ## Visitor count
-![Visitor Count](https://profile-counter.glitch.me/{edson-acordi}/count.svg)
-
-
+<!-- This is a comment ![Visitor Count](https://profile-counter.glitch.me/{edson-acordi}/count.svg)
+ -->
