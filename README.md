@@ -326,7 +326,11 @@ LOOP:
 
 ...
 
--------------------------------------------------
+# Demo #
+Showing MikroLeo in action!
+
+<img src="https://user-images.githubusercontent.com/60040866/200141100-d1a0a4b5-12c4-44e1-89cb-afe70181170c.mp4" width="30%" height="30%">
+
 # Pictures #
 
 Simulation of the Mikroleo circuit (Made with the "Digital" Software, developed by Helmut Neemann):  
