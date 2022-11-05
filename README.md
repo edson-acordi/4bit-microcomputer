@@ -389,7 +389,7 @@ Carlos Daniel de Souza Nunes
 # License #
 
 ***Note:***  
-I don't expect this project to be used commercially, so I decided to use the GNU GPL license for software to ensure that it is always free of charge, contributing, promoting, and disseminating the essential knowledge. As such, all code derived from it will also be open source!
+I don't expect this project to be used commercially, so I decided to use the GNU GPL license for software to ensure that it is always free of charge, contributing, promoting, and disseminating the essential knowledge. As such, all code derived from it will also be open source!  
 Likewise, for the hardware, the CERN-OHL-S license was used.
 
 **Hardware:** Licensed under CERN-OHL-S v2 or any later version  
