@@ -11,9 +11,13 @@
 
 The project is in the final testing stage.  
 This project was developed mainly for educational purposes.  
+Since my first attempts, many efforts have been made to make this project real.  
+
+It is intended to be useful to students, enthusiasts, hacker community, professors and anyone who wants to understand or improve their knowledge of digital electronics and how a simple computer works. Furthermore, it is also a historic attempt to rescue the early development of integrated circuits and CPU on a single chip, to demonstrate the capabilities that these machines had at that time.  
 
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
-Soon, the project files will be here!  
+
+The Kicad project files have been uploaded!  
 
 **Main Features**:
 - 2k x 16 ROM (up to 4k)
@@ -95,7 +99,7 @@ The Instruction Word, for example, for LDI RA,6 is coded as,
 `RC` - 4 bit Special purpose Register used for addressing.  
 
 **- Two Flags**  
-Flags are bits accessible only by conditional jump Instructions (JPC and JPZ).  
+Flags can only be checked by conditional jump instructions (JPC and JPZ).  
 
 `CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB/CMP instruction if it results in a borrow.  
 `ZF` - Zero Flag - It is affected by operations that modify the contents of the ACC and by CMP instruction. It is Set (ZF=1) if the result of the last operation was zero.    
@@ -325,13 +329,16 @@ LOOP:
 ```
 
 # Assembler Compiler #
-...
+Almost ready...:soon:
+
+# How to transfer compiled program to MikroLeo #
+Almost ready...:soon:
 
 # Emulator #
-...
+In progress...🚧
 
 # Demo #
-Showing MikroLeo in action!  
+MikroLeo in action!  
 
 A simple program to make a LED sequencer using the output ports. 
 
@@ -366,11 +373,11 @@ PCB Prototype:
 
 
 # History and Motivation #
-Since the time I took an 8086 assembly language programming course and took digital electronics and microprocessors classes in college, this project has been something I've always wanted to do.  
+Since the time I took an 8086 assembly language programming course and took digital electronics and microprocessors classes in college, this project has been something I've always wanted to do. I'm fascinated by electronics, computers and programming!
 
 The project started in 2020, and the first usable version was completed on April 20, 2020.  
 
-Initially, the development of the project used the Logisim-Evolution software, and later it was migrated to the Digital software (Helmut Neemann).  
+Initially, the development of the project used the Logisim-Evolution software, and later it was migrated to the Digital software [(click)](https://github.com/hneemann/Digital).  
 
 #### Some sources of inspiration can be seen at:  
 
@@ -398,10 +405,6 @@ Carlos Daniel de Souza Nunes
 
 # License #
 
-***Note:***  
-I don't expect this project to be used commercially, so I decided to use the GNU GPL license for software to ensure that it is always free of charge, contributing, promoting, and disseminating the essential knowledge. As such, all code derived from it will also be open source!  
-Likewise, for the hardware, the CERN-OHL-S license was used.
-
 **Hardware:** Licensed under CERN-OHL-S v2 or any later version  
 https://ohwr.org/cern_ohl_s_v2.txt
 
@@ -410,6 +413,10 @@ https://www.gnu.org/licenses/gpl-3.0.txt
 
 **Documentation:** Licensed under CC BY-SA 4.0  
 https://creativecommons.org/licenses/by-sa/4.0/  
+
+***Note:***  
+I don't expect this project to be used commercially, so I decided to use the CERN-OHL-S license for hardware to ensure it is always free, contributing, promoting, and disseminating the essential knowledge. As such, all hardware derived from it will also be open source!  
+Likewise, for the software, the GNU GPL license was used.
 
 ---
 ## Visitor count
