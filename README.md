@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-92%25-green>
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-92%25-green> <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(Useful OR you like it)&style=style=flat&color=9933FF" alt="Star Badge"/>
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
@@ -17,7 +17,11 @@ It is intended to be useful to students, enthusiasts, hacker community, professo
 
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
 
-The Kicad project files have been uploaded!  
+#### The Kicad project files have been uploaded!  
+Kicad Project:  
+[![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/edson-acordi/4bit-microcomputer/blob/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip)  
+Gerber Files:  
+[![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/edson-acordi/4bit-microcomputer/blob/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip)  
 
 **Main Features**:
 - 2k x 16 ROM (up to 4k)
@@ -249,7 +253,7 @@ LOOP:
 
 <ins> *Register Indirect* </ins>
 
-In this addressing mode, the `RC` Register points to the high address (b11:b8). Likewise, the 'RB' Register points to the medium Address (MA) while the RA Register points to the low Address (LA). Note that the contents of the lower and medium nibble of the instruction (MAddr, b7:b4 and LAddr, b3:b0) do not matter.  
+In this addressing mode, the `RC` Register points to the high address (b11:b8). Likewise, the `RB` Register points to the medium Address (MA) while the `RA` Register points to the low Address (LA). Note that the contents of the lower and medium nibble of the instruction (MAddr, b7:b4 and LAddr, b3:b0) do not matter.  
 
 The final address is composed by `RC:RB:RA`.  
 
@@ -343,6 +347,12 @@ MikroLeo in action!
 A simple program to make a LED sequencer using the output ports. 
 
 <img src="https://user-images.githubusercontent.com/60040866/200141100-d1a0a4b5-12c4-44e1-89cb-afe70181170c.mp4" width="30%" height="30%">
+
+# Building your own Mikroleo #
+...
+
+# Contribution guidelines #
+...
 
 # Pictures #
 
