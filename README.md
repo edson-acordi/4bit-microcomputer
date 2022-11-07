@@ -18,11 +18,11 @@ It is intended to be useful to students, enthusiasts, hacker community, professo
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
 
 #### The Kicad project files have been uploaded!  
-[Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/tree/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
+[Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
-[Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/tree/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
+[Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
 
 **Main Features**:
 - 2k x 16 ROM (up to 4k)
