@@ -20,7 +20,7 @@ It is a fully open-source hardware and software project that can be built at hom
 Initially, the development of the project used the Logisim-Evolution software, and later it was migrated to the Digital software [(click)](https://github.com/hneemann/Digital).  
 
 #### The Kicad project files have been uploaded!  
-[Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip "download")  
+[Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/MikroLeo_v0.1901.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
