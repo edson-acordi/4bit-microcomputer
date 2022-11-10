@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-92%25-green> <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(Useful OR you like it)&style=style=flat&color=9933FF" alt="Star Badge"/>
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test%3A-92%25-green> <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(you liked OR want to suppport)&style=style=flat&color=9933FF" alt="Star Badge"/>
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
