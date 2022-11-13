@@ -10,10 +10,13 @@
 <!-- This is a comment -->
 
 The project is in the final testing stage.  
-This project was developed mainly for educational purposes and I hope it will be a good learning platform for those who like electronics, computers and programming.
+
+This project was developed mainly for educational purposes.  
+I hope it will be a good learning platform for those who like electronics, computers and programming.  
+
 Since my first attempts, many efforts have been made to make this project real.  
 
-It is intended to be useful to students, enthusiasts, hacker community, professors and anyone who wants to understand or improve their knowledge of digital electronics and how a simple computer works. In addition, it is also an attempt to rescue the story about the beginning of the development of integrated circuits and computers on a single chip, to demonstrate the capabilities that these machines had at that time.  
+It is intended to be useful to students, enthusiasts, hackers, professors and anyone who wants to understand or improve their knowledge of digital electronics and how a simple computer works. In addition, it is also an attempt to rescue the story about the beginning of the development of integrated circuits and computers on a single chip, to demonstrate the capabilities that these machines had at that time.  
 
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
 
