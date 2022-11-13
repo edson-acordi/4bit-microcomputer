@@ -43,6 +43,8 @@ Help to promote and disseminate the knowledge.*
    * adjustable clock speed
 - No MPU/MCU or complex chips
 - No microcode
+- Program memory implemented with RAM to easy programming
+- Supercapacitor or battery to keep the program in RAM (for low power version)
 - Built with 74HCTxxx integrated circuits
 - Dual layer Single board with 295.9mm x 196.9mm
 
@@ -355,13 +357,13 @@ A simple program to make a LED sequencer using the output ports.
 
 <img src="https://user-images.githubusercontent.com/60040866/200141100-d1a0a4b5-12c4-44e1-89cb-afe70181170c.mp4" width="30%" height="30%">
 
-# Building your own Mikroleo #
+# Building your own MikroLeo #
 ...:soon:
 # Contribution guidelines #
 ...:soon:
 # Pictures #
 
-Simulation of the Mikroleo circuit (Made with the "Digital" Software, developed by Helmut Neemann):  
+Simulation of the MikroLeo circuit (Made with the "Digital" Software, developed by Helmut Neemann):  
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
 Breadboard:  
