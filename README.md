@@ -17,6 +17,9 @@ It is intended to be useful to students, enthusiasts, hacker community, professo
 
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
 
+*Support this project!  
+Help to promote and disseminate the knowledge.*  
+
 #### The Kicad project files have been uploaded!  
 [Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
 <!--
