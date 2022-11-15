@@ -41,7 +41,7 @@ It is a fully open-source hardware and software project that can be built at hom
 - 4 Input Ports (16 inputs)
 - Single Cycle Instruction/RISC
 - Harvard Architecture
-- 3 execution modes:Simulation of the MikroLeo circuit.
+- 3 execution modes:
    * step
    * 3MHz (precise time base)
    * adjustable clock speed
