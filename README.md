@@ -18,17 +18,21 @@ Since my first attempts, many efforts have been made to make this project real.
 
 It is intended to be useful to students, enthusiasts, hackers, professors and anyone who wants to understand or improve their knowledge of digital electronics and how a simple computer works. In addition, it is also an attempt to rescue the story about the beginning of the development of integrated circuits and computers on a single chip, to demonstrate the capabilities that these machines had at that time.  
 
-It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be sent to be produced by some company.  
+It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be produced by some company.  
 
-*Support this project!  
-Help to promote and disseminate the knowledge.*  
+*Support this project!*  
+*Help to promote and disseminate the knowledge.*  
 
-#### The Kicad project files have been uploaded!  
+---
+
+#### The Kicad project files have been uploaded! ####
 [Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
 [Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
+
+---
 
 **Main Features**:
 - 2k x 16 ROM (up to 4k)
@@ -363,7 +367,7 @@ A simple program to make a LED sequencer using the output ports.
 ...:soon:
 # Pictures #
 
-Simulation of the MikroLeo circuit (Made with the "Digital" Software, developed by Helmut Neemann):  
+Simulation of the MikroLeo circuit (Made with "Digital", https://github.com/hneemann/Digital):  
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
 Breadboard:  
@@ -394,7 +398,7 @@ Since the time I took an 8086 assembly language programming course and took digi
 
 The project started in 2020, and the first usable version was completed on April 20, 2020.  
 
-Initially, the development of the project used the Logisim-Evolution software, and later it was migrated to the Digital software [(click)](https://github.com/hneemann/Digital).  
+Initially, the development of the project used the Logisim-Evolution (https://github.com/logisim-evolution/logisim-evolution), and later it was migrated to the Digital (https://github.com/hneemann/Digital).  
 
 #### Some sources of inspiration can be seen at:  
 
@@ -408,9 +412,9 @@ https://apollo181.wixsite.com/apollo181/specification
 I dedicate this project to my beloved son, Leonardo Pimentel Acordi.  
 
 # Acknowledgements #
-
+Fundação Araucária
 ### The authors would like to thank:  
-- The IFPR (Instituto Federal do Paraná) and CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) for partially funding this project.
+- The IFPR (Instituto Federal do Paraná), CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) and Fundação Araucária for the partial funding and support for this project.
 
 - The RENESAS (https://www.renesas.com/br/en) for sending me memory samples for tests with MikroLeo.
 
@@ -431,7 +435,7 @@ https://www.gnu.org/licenses/gpl-3.0.txt
 **Documentation:** Licensed under CC BY-SA 4.0  
 https://creativecommons.org/licenses/by-sa/4.0/  
 
-***Note:***  
+>***Note:***  
 I don't expect this project to be used commercially, so I decided to use the CERN-OHL-S license for hardware to ensure it is always free, contributing, promoting, and disseminating the essential knowledge. As such, all hardware derived from it will also be open source!  
 Likewise, for the software, the GNU GPL license was used.
 
