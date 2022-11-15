@@ -412,7 +412,7 @@ https://apollo181.wixsite.com/apollo181/specification
 I dedicate this project to my beloved son, Leonardo Pimentel Acordi.  
 
 # Acknowledgements #
-Fundação Araucária
+
 ### The authors would like to thank:  
 - The IFPR (Instituto Federal do Paraná), CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) and Fundação Araucária for the partial funding and support for this project.
 
