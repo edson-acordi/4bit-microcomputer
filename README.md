@@ -399,7 +399,7 @@ Since the time I took an 8086 assembly language programming course and took digi
 
 The project started in 2020, and the first usable version was completed on April 20, 2020.  
 
-Initially, the development of the project used the Logisim-Evolution (https://github.com/logisim-evolution/logisim-evolution), and later it was migrated to the Digital (https://github.com/hneemann/Digital).  
+Initially, the development of the project used the [Logisim-Evolution](https://github.com/logisim-evolution/logisim-evolution), and later it was migrated to the [Digital](https://github.com/hneemann/Digital).  
 
 #### Some sources of inspiration can be seen at:  
 
