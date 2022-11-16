@@ -410,6 +410,7 @@ https://www.bigmessowires.com/nibbler/
 https://gigatron.io/  
 https://eater.net/  
 https://apollo181.wixsite.com/apollo181/specification  
+https://www.megaprocessor.com/  
 
 # Dedication #
 I dedicate this project to my beloved son, Leonardo Pimentel Acordi.  
