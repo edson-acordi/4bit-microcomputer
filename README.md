@@ -32,6 +32,8 @@ It is a fully open-source hardware and software project that can be built at hom
 -->
 [Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
 
+[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A.pdf "download")
+
 ---
 
 **Main Features**:
