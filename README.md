@@ -49,8 +49,10 @@ It is a fully open-source hardware and software project that can be built at hom
 - No microcode
 - Indirect addressing to facilitate the implementation of subroutines
 - Program memory implemented with RAM to easy programming
+- It accepts 300 and 600 mils memories (for those with old DIP versions)
 - Supercapacitor or battery to keep the program in RAM (for low power version)
-- Built with 74HCTxxx integrated circuits
+- It can be manually programmed by switches or via Arduino/Esp32
+- Built with 74HCTxxx integrated circuits for low power consumption and compatibility with TTL circuits
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture #
