@@ -64,6 +64,8 @@ Note that some buffers are used to allow viewing the contents of registers at an
 
 # The MikroLeo Instruction Set #
 
+Although MikroLeo has only 20 instructions, using AMODE bit and Modifier bits, it is possible to encode 64 instruction combinations.
+
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
 ## Instruction Set explanation and examples ##
