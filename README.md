@@ -25,8 +25,8 @@ It is a fully open-source hardware and software project that can be built at hom
 
 ---
 
-#### The Kicad project files have been uploaded! ####
-[Download Kicad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
+#### The KiCad project files have been uploaded! ####
+[Download KiCad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
@@ -380,7 +380,8 @@ Simulation of the MikroLeo circuit (Made with "Digital", https://github.com/hnee
 Breadboard:  
 <img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
 
-PCB (Kicad 3D viewer):  
+PCB (KiCad 3D viewer):  
+To carry out the project, the [KiCad](https://www.kicad.org/) software was used, an excellent and powerful free and open-source tool for printed circuit board (PCB) designers.  
 <img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
 
 PCB Prototype:  
