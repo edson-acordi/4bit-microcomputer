@@ -366,7 +366,7 @@ MikroLeo in action!
 
 A simple program to make a LED sequencer using the output ports. 
 
-<img src="https://user-images.githubusercontent.com/60040866/200141100-d1a0a4b5-12c4-44e1-89cb-afe70181170c.mp4" width="30%" height="30%">
+<img src="https://user-images.githubusercontent.com/60040866/202727866-5db3f19f-970d-4fe7-933c-747d0e465b1a.mp4" width="30%" height="30%">
 
 # Building your own MikroLeo #
 ...:soon:
