@@ -382,7 +382,10 @@ Breadboard:
 
 PCB (KiCad 3D viewer):  
 To carry out the project, the [KiCad](https://www.kicad.org/) software was used, an excellent and powerful free and open-source tool for printed circuit board (PCB) designers.  
+MikroLeo PCB:  
 <img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
+A simple seven-segment display interface:  
+<img src="https://user-images.githubusercontent.com/60040866/198721799-a761d863-84b6-472f-9a41-5be4505674a5.png" width="25%" height="25%">
 
 PCB Prototype:  
 <img src="https://user-images.githubusercontent.com/60040866/166628285-47b3ee24-fd4e-49f8-9bca-21af1cec307d.jpg" width="55%" height="55%">  
