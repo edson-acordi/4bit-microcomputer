@@ -1,1 +1,1 @@
-This folder holds the Kicad projects files for MikroLeo.
+This folder contains the KiCad files for Mikroleo.
