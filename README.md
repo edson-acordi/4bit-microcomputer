@@ -85,7 +85,7 @@ ROML (Least significant byte of program memory):
 $\text{\small\textcolor{brown}{- Note: b15 = bit15 ... b0 = bit0}}$
 
 So we have,  
-<img src="https://user-images.githubusercontent.com/60040866/202837887-f5edcd42-c6f8-4a35-a622-fa1a2f0c4fc0.png" width="45%" height="45%">  
+<img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="40%" height="40%">  
 
 ### ###
 **LDI - Load with Immediate**
