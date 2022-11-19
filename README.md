@@ -379,6 +379,7 @@ A simple program to make a LED sequencer using the output ports.
 # Pictures #
 
 Simulation of the MikroLeo circuit (Made with "Digital", https://github.com/hneemann/Digital):  
+[Digital](https://github.com/hneemann/Digital) is free, open source and cross-platform software with a nice interface for digital logic design and circuit simulation.
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
 Breadboard:  
@@ -452,7 +453,7 @@ https://www.gnu.org/licenses/gpl-3.0.txt
 https://creativecommons.org/licenses/by-sa/4.0/  
 
 >***Note:***  
-I don't expect this project to be used commercially, so I decided to use the CERN-OHL-S license for hardware to ensure it is always free, contributing, promoting, and disseminating the essential knowledge. As such, all hardware derived from it will also be open source!  
+As this project is intended for educational purposes, I have decided to use the CERN-OHL-S license for hardware to ensure that it is always free, contributing, promoting and disseminating the essential knowledge. As such, all hardware derived from it will also be open source!  
 Likewise, for the software, the GNU GPL license was used.
 
 ---
