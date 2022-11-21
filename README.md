@@ -376,6 +376,10 @@ A simple program to make a LED sequencer using the output ports.
 
 <img src="https://user-images.githubusercontent.com/60040866/202727866-5db3f19f-970d-4fe7-933c-747d0e465b1a.mp4" width="30%" height="30%">
 
+A simple program to initialize an LCD.
+
+<img src="https://user-images.githubusercontent.com/60040866/203067797-5abf8e9d-f373-4fb6-898b-bcc9be4d5c2a.mp4" width="30%" height="30%">
+
 # Building your own MikroLeo #
 ...:soon:
 # Contribution guidelines #
