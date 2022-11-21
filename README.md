@@ -20,6 +20,8 @@ It is aimed at students, enthusiasts, hackers, professors and anyone who wants t
 
 It is a fully open-source hardware and software project that can be built at home.  Only the printed circuit board (PCB) needs to be produced by some company.  
 
+For the next steps, an important thing is to make good documentation for MikroLeo!
+
 *Support this project!*  
 *Help to promote and disseminate the knowledge.*  
 
@@ -37,6 +39,7 @@ It is a fully open-source hardware and software project that can be built at hom
 ---
 
 **Main Features**:
+- Implements a 4 bit CPU
 - 2k x 16 ROM (up to 4k)
 - 2k x 4 RAM (up to 4k)
 - 4 Output Ports (16 outputs)
@@ -55,6 +58,7 @@ It is a fully open-source hardware and software project that can be built at hom
 - Supercapacitor or battery to keep the program in RAM (for low power version)
 - It can be manually programmed by switches or via Arduino/Esp32
 - Built with 74HCTxxx integrated circuits for low power consumption and compatibility with TTL circuits
+- All parts are through-hole for easy assembly
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture #
