@@ -386,7 +386,7 @@ A simple program to initialize an LCD.
 ...:soon:
 # Pictures #
 
-Simulation of the MikroLeo circuit (Made with "Digital", https://github.com/hneemann/Digital):  
+Simulation of the MikroLeo circuit (Made with "Digital"):  
 [Digital](https://github.com/hneemann/Digital) is free, open source and cross-platform software with a nice interface for digital logic design and circuit simulation.
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
 
@@ -395,7 +395,6 @@ Breadboard:
 
 PCB (KiCad 3D viewer):  
 To carry out the project, the [KiCad](https://www.kicad.org/) software was used, an excellent and powerful free and open-source tool for printed circuit board (PCB) designers.  
-MikroLeo PCB,  
 <img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
 A simple seven-segment display interface,  
 <img src="https://user-images.githubusercontent.com/60040866/198721799-a761d863-84b6-472f-9a41-5be4505674a5.png" width="25%" height="25%">
