@@ -12,7 +12,7 @@
 The project is in the final testing stage.  
 
 This project was developed mainly for educational purposes.  
-I hope it will be a good learning platform for those who like electronics, computers and programming.  
+I hope it will be a good learning platform for anyone who likes electronics, computers and programming.  
 
 Since my first attempts, many efforts have been made to make this project real.  
 
