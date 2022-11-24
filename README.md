@@ -197,19 +197,19 @@ In this mode, the operand must be one of the four registers (ACC, RC, RB, RA). T
 
 Example 1:  
 ```asm
-  LDR RA     ;Loads the value of the ACC accumulator into the RA register.
+LDR RA     ;Loads the value of the ACC accumulator into the RA register.
 ```
 Example 2:  
 ```asm
-  LDR RB     ;Loads the value of the ACC accumulator into the RB register.
+LDR RB     ;Loads the value of the ACC accumulator into the RB register.
 ```
 Example 3: 
 ```asm
-  LDA RA     ;Loads the value from the RA Register into the ACC accumulator.
+LDA RA     ;Loads the value from the RA Register into the ACC accumulator.
 ```
 Example 4: 
 ```asm
-  LDA RC     ;Loads the value from the RC Register into the accumulator ACC.
+LDA RC     ;Loads the value from the RC Register into the accumulator ACC.
 ```
 
 <ins> *Register Indirect + Absolute* </ins>
@@ -229,27 +229,27 @@ In the MikroLeo python assembler, absolute addresses (`MAddr:LAddr`) are indicat
 
 Example 1:
 ```asm
-  LDI RC,1       ;Loads the operand value into the RC Register.
-  OUTA @0xF4     ;Sends the contents of the RAM address pointed to by RC:MAddr:LAddr to output port A,
-                 ;in this case, the RAM address is RC:MAddr:LAddr = 1F4h.
+LDI RC,1       ;Loads the operand value into the RC Register.
+OUTA @0xF4     ;Sends the contents of the RAM address pointed to by RC:MAddr:LAddr to output port A,
+               ;in this case, the RAM address is RC:MAddr:LAddr = 1F4h.
 ```
 Example 2:
 ```asm
-  LDI RC,3       ;Loads the operand value into the RC Register.
-  ADD ACC,@0xFC  ;Sum the contents of the RAM address pointed to by RC:MAddr:LAddr with ACC and stores
-                 ;it in ACC. In this case, the RAM address is RC:MAddr:LAddr = 3FCh.
+LDI RC,3       ;Loads the operand value into the RC Register.
+ADD ACC,@0xFC  ;Sum the contents of the RAM address pointed to by RC:MAddr:LAddr with ACC and stores
+               ;it in ACC. In this case, the RAM address is RC:MAddr:LAddr = 3FCh.
 ```
 Example 3:  
 ```asm
-  LDI RC,1       ;Loads the operand value into the RC Register.
-  JPI @0x23      ;Jumps to the specified label. In this case, the label address is RC:MAddr:LAddr = 123h.
+LDI RC,1       ;Loads the operand value into the RC Register.
+JPI @0x23      ;Jumps to the specified label. In this case, the label address is RC:MAddr:LAddr = 123h.
 ```
 Example 4:  
 ```asm
-  LDI RC,2       ;Loads the operand value into the RC Register.
-  CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
-  JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
-                 ;RC:MAddr:LAddr = 234h.
+LDI RC,2       ;Loads the operand value into the RC Register.
+CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
+JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
+               ;RC:MAddr:LAddr = 234h.
 ```
 Example 5:  
 ```asm
@@ -296,34 +296,34 @@ In MikroLeo's python assembler, indirect register addresses (`RC`:`RB`:`RA`) are
 
 Example 1:
 ```asm
-  LDI RC,1       ;Loads the operand value into the RC Register.
-  LDI RB,0xF
-  LDI RA,4
-  OUTA @R        ;Sends the contents of the RAM address pointed to by RC:RB:RA to output port A,
+LDI RC,1       ;Loads the operand value into the RC Register.
+LDI RB,0xF
+LDI RA,4
+OUTA @R        ;Sends the contents of the RAM address pointed to by RC:RB:RA to output port A,
                  ;in this case, the RAM address is RC:RB:RA = 1F4h.
 ```
 Example 2:
 ```asm
-  LDI RC,3       ;Loads the operand value into the RC Register.
-  LDI RB,0xF
-  LDI RA,0xC
-  ADD ACC,@R     ;Sum the contents of the RAM address pointed to by RC:RB:RA with ACC and stores
+LDI RC,3       ;Loads the operand value into the RC Register.
+LDI RB,0xF
+LDI RA,0xC
+ADD ACC,@R     ;Sum the contents of the RAM address pointed to by RC:RB:RA with ACC and stores
                  ;it in ACC. In this case, the RAM address is RC:RB:RA = 3FCh.
 ```
 Example 3:  
 ```asm
-  LDI RC,1       ;Loads the operand value into the RC Register.
-  LDI RB,2
-  LDI RA,3
-  JPI @R         ;Jumps to the specified label. In this case, the label address is RC:RB:RA = 123h.
+LDI RC,1       ;Loads the operand value into the RC Register.
+LDI RB,2
+LDI RA,3
+JPI @R         ;Jumps to the specified label. In this case, the label address is RC:RB:RA = 123h.
 ```
 Example 4:  
 ```asm
-  LDI RC,2       ;Loads the operand value into the RC Register.
-  LDI RB,3
-  LDI RA,4
-  CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
-  JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
+LDI RC,2       ;Loads the operand value into the RC Register.
+LDI RB,3
+LDI RA,4
+CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
+JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
                  ;RC:RB:RA = 234h.
 ```
 Example 5:  
