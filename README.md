@@ -59,6 +59,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 - It can be manually programmed by switches or via Arduino/Esp32
 - Built with 74HCTxxx integrated circuits for low power consumption and compatibility with TTL circuits
 - All parts are through-hole for easy assembly
+- All control signals, registers and the program counter are available through the pin header connectors
 - Dual layer Single board with 295.9mm x 196.9mm
 
 # MikroLeo Architecture #
