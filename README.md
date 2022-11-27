@@ -96,12 +96,14 @@ Thus, the Instruction Word is given as,
 ### ###
 **LDI - Load with Immediate**
 
-| <sub>Instruction Word</sub> | <sub>AMODE:Modifier:OPCODE</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+| <sub>Instruction Word</sub> | <sub>AMODE[b14]:MOD[b13:b12]:MICRO[b11:b8]</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x000n           |0x00                   | LDI ACC,n            |ZF              |
 | 0x100n           |0x10                   | LDI RA,n             |-               |
 | 0x200n           |0x20                   | LDI RB,n             |-               |
 | 0x300n           |0x30                   | LDI RC,n             |-               |
+
+Note: Note that the operand (immediate) is represented by the letter "n".  
 
 <ins>Examples:</ins>
 
