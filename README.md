@@ -69,7 +69,7 @@ Note that some buffers are used to allow viewing the contents of registers at an
 
 # The MikroLeo Instruction Set #
 
-Although MikroLeo has only 20 instructions, using AMODE bit (b14) and Modifier bits (b13:b12), it is possible to encode 64 instruction combinations.
+Although MikroLeo has only 20 instructions, using the AMODE bit (b14) and the modifier bits (b13:b12), it is possible to encode 64 combinations of instructions, as can be seen below.
 
 <img src="https://user-images.githubusercontent.com/60040866/170366957-110239df-7da6-4218-90b6-5bdac46af302.png" width="80%" height="80%">  
 
@@ -103,7 +103,7 @@ Thus, the Instruction Word is given as,
 | 0x200n           |0x20                   | LDI RB,n             |-               |
 | 0x300n           |0x30                   | LDI RC,n             |-               |
 
-Note: Note that the operand (immediate) is represented by the letter "n".  
+Note that the operand (immediate) is represented by the letter "n".  
 
 <ins>Examples:</ins>
 
@@ -122,7 +122,14 @@ The Instruction Word, for example, for LDI RA,6 is coded as,
   ┆└────> Third Nibble => MICRO[b11:b8] = 0
   └─────> Most significant Nibble => HiNB[b15:b12] = 1
 ```
-
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0001 0000 0000 0006
+  ┆    ┆    ┆    └──> Operand = 6
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 0 (OPCode)
+  └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+```
 ...
 
 # Basic Documentation #
@@ -445,7 +452,7 @@ I dedicate this project to my beloved son, Leonardo Pimentel Acordi.
 
 - The RENESAS (https://www.renesas.com/br/en) for sending me memory samples for tests with MikroLeo.  
 
-- All the people who have supported this project.
+- All people from the Github community and externals who support this project.
 
 # Authors #
 
