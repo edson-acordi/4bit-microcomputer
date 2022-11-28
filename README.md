@@ -310,7 +310,7 @@ LDI RC,1       ;Loads the operand value into the RC Register.
 LDI RB,0xF
 LDI RA,4
 OUTA @R        ;Sends the contents of the RAM address pointed to by RC:RB:RA to output port A,
-                 ;in this case, the RAM address is RC:RB:RA = 1F4h.
+               ;in this case, the RAM address is RC:RB:RA = 1F4h.
 ```
 Example 2:
 ```asm
@@ -318,7 +318,7 @@ LDI RC,3       ;Loads the operand value into the RC Register.
 LDI RB,0xF
 LDI RA,0xC
 ADD ACC,@R     ;Sum the contents of the RAM address pointed to by RC:RB:RA with ACC and stores
-                 ;it in ACC. In this case, the RAM address is RC:RB:RA = 3FCh.
+               ;it in ACC. In this case, the RAM address is RC:RB:RA = 3FCh.
 ```
 Example 3:  
 ```asm
@@ -334,7 +334,7 @@ LDI RB,3
 LDI RA,4
 CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
 JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
-                 ;RC:RB:RA = 234h.
+               ;RC:RB:RA = 234h.
 ```
 Example 5:  
 ```asm
