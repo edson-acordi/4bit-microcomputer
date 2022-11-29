@@ -130,6 +130,26 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    └────────────> MICRO = 0 (OPCode)
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
 ```
+
+**NAND - Nand bit-wise**
+| <sub>Instruction Word</sub> | <sub>AMODE[b14]:MOD[b13:b12]:MICRO[b11:b8]</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|----------------|
+| 0x010n           |0x10                   | NAND ACC,n           |ZF              |
+| 0x1100           |0x11                   | NAND RA,n            |-               |
+| 0x210n           |0x20                   | NAND RB,n            |-               |
+| 0x310n           |0x30                   | NAND ACC,@RAM        |-               |
+
+Note that the RAM address is pointed by RC:MAddr:LAddr.
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand             |
+| 0x1106           | NAND RA,6       | NAND operation between the register RA and the operand             |
+| 0x2107           | NAND RB,7       | NAND operation between the register RB and the operand             |
+| 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC |
+
 ...
 
 # Basic Documentation #
