@@ -10,8 +10,8 @@
 #
 # License: GNU GPL v3
 #
-# Usage: python mikroleo.py sourcefilename
-# Example: python mikroLeo.py test.asm
+# Usage: python MikroLeoAsm_20221130.py sourcefilename
+# Example: python MikroLeoAsm_20221130.py test.asm
 #
 # For the assembly language details, see the MikroLeo documentation.
 #
