@@ -38,6 +38,11 @@ For the next steps, an important thing is to make good documentation for MikroLe
 
 ---
 
+#### A Python program to generate machine code has been uploaded ####
+[Download Python code to "compile" asm files](https://raw.githubusercontent.com/edson-acordi/4bit-microcomputer/master/Compiler/MikroLeoAsm_20221130.py)  
+
+---
+
 **Main Features**:
 - Implements a 4 bit CPU
 - 2k x 16 ROM (up to 4k)
@@ -96,7 +101,7 @@ Thus, the Instruction Word is given as,
 ### ###
 **LDI - Load with Immediate**
 
-| <sub>Instruction Word</sub> | <sub>AMODE[b14]:MOD[b13:b12]:MICRO[b11:b8]</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x000n           |0x00                   | LDI ACC,n            |ZF              |
 | 0x100n           |0x10                   | LDI RA,n             |-               |
@@ -104,6 +109,7 @@ Thus, the Instruction Word is given as,
 | 0x300n           |0x30                   | LDI RC,n             |-               |
 
 Note that the operand (immediate) is represented by the letter "n".  
+The MAddr nibble is not used with this instruction, so it is left at 0.
 
 <ins>Examples:</ins>
 
@@ -132,7 +138,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```
 
 **NAND - Nand bit-wise**
-| <sub>Instruction Word</sub> | <sub>AMODE[b14]:MOD[b13:b12]:MICRO[b11:b8]</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x010n           |0x10                   | NAND ACC,n           |ZF              |
 | 0x1100           |0x11                   | NAND RA,n            |-               |
@@ -148,8 +154,24 @@ Note that the RAM address is pointed by RC:MAddr:LAddr.
 | 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand             |
 | 0x1106           | NAND RA,6       | NAND operation between the register RA and the operand             |
 | 0x2107           | NAND RB,7       | NAND operation between the register RB and the operand             |
-| 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC |
+| 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:0:a|
 
+The Instruction Word, for example, for NAND ACC,5 is coded as,
+```asm
+0x0105
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 5
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 1
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0000 0001 0000 0005
+  ┆    ┆    ┆    └──> Operand = 5
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 0 (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+```
 ...
 
 # Basic Documentation #
@@ -391,7 +413,7 @@ LOOP:
 ```
 
 # Assembler Compiler #
-Almost ready...:soon:
+Released!
 
 # How to transfer compiled program to MikroLeo #
 Almost ready...:soon:
