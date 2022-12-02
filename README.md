@@ -414,6 +414,7 @@ LOOP:
 
 # Assembler Compiler #
 Released!
+See examples how to use...
 
 # How to transfer compiled program to MikroLeo #
 Almost ready...:soon:
