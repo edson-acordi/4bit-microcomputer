@@ -148,9 +148,9 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 | 0x310n           |0x31                   | NAND ACC,@RAM        |-               |
 | 0x7100           |0x71                   | NAND ACC,@R          |ZF              |
 
-Note:
-The RAM address for @RAM is pointed by RC:MAddr:LAddr.
-The RAM address for @R is pointed by RC:RB:RA.
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
 
 <ins>Examples:</ins>
 
@@ -183,10 +183,6 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 |------------------|-----------------------|---------------------|----------------|
 | 0x020n           |0x02                   | LDW ACC,@RAM        |ZF              |
 | 0x4200           |0x42                   | LDW ACC,@R          |ZF              |
-
-Note:
-the RAM address for @RAM is pointed by RC:MAddr:LAddr.
-the RAM address for @R is pointed by RC:RB:RA.
 
 <ins>Examples:</ins>
 
