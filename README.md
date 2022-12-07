@@ -142,10 +142,10 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 **NAND - Nand bit-wise**
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x010n           |0x10                   | NAND ACC,n           |ZF              |
+| 0x010n           |0x01                   | NAND ACC,n           |ZF              |
 | 0x1100           |0x11                   | NAND RA,n            |-               |
-| 0x210n           |0x20                   | NAND RB,n            |-               |
-| 0x310n           |0x30                   | NAND ACC,@RAM        |-               |
+| 0x210n           |0x21                   | NAND RB,n            |-               |
+| 0x310n           |0x31                   | NAND ACC,@RAM        |-               |
 
 Note that the RAM address is pointed by RC:MAddr:LAddr.
 
@@ -171,8 +171,8 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 0000 0001 0000 0005
   ┆    ┆    ┆    └──> Operand = 5
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
-  ┆    └────────────> MICRO = 0 (OPCode)
-  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+  ┆    └────────────> MICRO = 1 (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 ...
 
