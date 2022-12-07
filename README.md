@@ -47,7 +47,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 
 **Main Features**:
 - Implements a 4 bit CPU
-- 2k x 16 ROM (up to 4k)
+- 2k x 16 Program Memory (up to 4k)
 - 2k x 4 RAM (up to 4k)
 - 4 Output Ports (16 outputs)
 - 4 Input Ports (16 inputs)
