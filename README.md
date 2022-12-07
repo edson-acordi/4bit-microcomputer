@@ -146,8 +146,11 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 | 0x1100           |0x11                   | NAND RA,n            |-               |
 | 0x210n           |0x21                   | NAND RB,n            |-               |
 | 0x310n           |0x31                   | NAND ACC,@RAM        |-               |
+| 0x7100           |0x71                   | NAND ACC,@R          |ZF              |
 
-Note that the RAM address is pointed by RC:MAddr:LAddr.
+Note:
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.
+The RAM address for @R is pointed by RC:RB:RA.
 
 <ins>Examples:</ins>
 
@@ -172,6 +175,40 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    ┆    └──> Operand = 5
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 1 (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
+**LDW - Load from RAM Memory**
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|---------------------|----------------|
+| 0x020n           |0x02                   | LDW ACC,@RAM        |ZF              |
+| 0x4200           |0x42                   | LDW ACC,@R          |ZF              |
+
+Note:
+the RAM address for @RAM is pointed by RC:MAddr:LAddr.
+the RAM address for @R is pointed by RC:RB:RA.
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x023b           | LDW ACC,@0x3b   | Loads the contents of the RAM address (RC:3:b) in ACC             |
+| 0x4206           | LDW ACC,@R      |Loads the contents of the RAM address (RC:RB:RA) in ACC             |
+
+The Instruction Word, for example, for LDW ACC,@0x0a is coded as,
+```asm
+0x023b
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = b
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 3
+  ┆└────> Third Nibble => MICRO[b11:b8] = 2
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0000 0002 0003 000b
+  ┆    ┆    ┆    └──> Operand = b
+  ┆    ┆    └───────> MAddr = 3 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 2 (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 ...
