@@ -23,7 +23,7 @@
 import sys
 import re
 
-# OpCodes in hexadecimal notation
+# OpCodes in hexadecimal notation (ROMH)
 opCodes = {  # Indirect + Absolute Address (AMODE = 0) - RC:MAddr:LAddr
            'LDIACC': '0', 'LDIRA': '0x10', 'LDIRB': '0x20', 'LDIRC': '0x30',
            'NANDACC': '1', 'NANDACCRA': '0x11', 'NANDACCRB': '0x21',
