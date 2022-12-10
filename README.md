@@ -101,7 +101,9 @@ Thus, the Instruction Word is given as,
 <img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="50%" height="50%">  
 
 ### ###
-**LDI - Load with Immediate**
+**LDI - Load with Immediate**  
+Loads the operand value into a register.  
+Registers: ACC, RA, RB or RC
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
@@ -143,9 +145,9 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x010n           |0x01                   | NAND ACC,n           |ZF              |
-| 0x1100           |0x11                   | NAND RA,n            |-               |
-| 0x210n           |0x21                   | NAND RB,n            |-               |
-| 0x310n           |0x31                   | NAND ACC,@RAM        |-               |
+| 0x1100           |0x11                   | NAND ACC,RA          |ZF              |
+| 0x210n           |0x21                   | NAND ACC,RB          |ZF              |
+| 0x310n           |0x31                   | NAND ACC,@RAM        |ZF              |
 | 0x7100           |0x71                   | NAND ACC,@R          |ZF              |
 
 Note:  
@@ -156,10 +158,11 @@ The RAM address for @R is pointed by RC:RB:RA.
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
-| 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand             |
-| 0x1106           | NAND RA,6       | NAND operation between the register RA and the operand             |
-| 0x2107           | NAND RB,7       | NAND operation between the register RB and the operand             |
+| 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand and stores it in ACC |
+| 0x1106           | NAND ACC,RA     | NAND operation between the accumulator and register RA and stores it in ACC |
+| 0x2107           | NAND ACC,RB     | NAND operation between the accumulator and register RB and stores it in ACC |
 | 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:0:a|
+| 0x710a           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for NAND ACC,5 is coded as,
 ```asm
