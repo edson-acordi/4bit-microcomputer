@@ -132,7 +132,7 @@ The Instruction Word, for example, for LDI RA,6 is coded as,
 ```
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
 ```asm
-0001 0000 0000 0006
+0001 0000 0000 0110
   ┆    ┆    ┆    └──> Operand = 6
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 0 (OPCode)
@@ -171,7 +171,7 @@ The Instruction Word, for example, for NAND ACC,5 is coded as,
 ```
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
 ```asm
-0000 0001 0000 0005
+0000 0001 0000 0101
   ┆    ┆    ┆    └──> Operand = 5
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 1 (OPCode)
@@ -201,12 +201,50 @@ The Instruction Word, for example, for LDW ACC,@0x0a is coded as,
 ```
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
 ```asm
-0000 0002 0003 000b
+0000 0010 0011 1011
   ┆    ┆    ┆    └──> Operand = b
   ┆    ┆    └───────> MAddr = 3 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 2 (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
+
+**LDA - Load Accumulator**
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|----------------|
+| 0x13xx           |0x13                   | LDA RA             |ZF              |
+| 0x23xx           |0x23                   | LDA RB             |ZF              |
+| 0x33xx           |0x33                   | LDA RC             |ZF              |
+
+Note: 'x' means it doesn't matter.
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|-------------|-|
+| 0x1300           | LDA RA    | Load RA with operand |
+| 0x2300           | LDA RB    | Load RB with operand |
+| 0x3300           | LDA RC    | Load ACC with operand |
+
+The MAddr/LAddr nibble is not used with this instruction, so it is left at 0.
+
+The Instruction Word, for example, for LDA RA is coded as,
+```asm
+0x1300
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 3
+  └─────> Most significant Nibble => HiNB[b15:b12] = 1
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0001 0011 0000 0000
+  ┆    ┆    ┆    └──> Operand = 0 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 3 (OPCode)
+  └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+```
+
 ...
 
 # Basic Documentation #
