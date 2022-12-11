@@ -103,27 +103,29 @@ Thus, the Instruction Word is given as,
 ### ###
 **LDI - Load with Immediate**  
 Loads the operand value into a register.  
-Registers: ACC, RA, RB or RC
+Registers: ACC, RA, RB or RC  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x000n           |0x00                   | LDI ACC,n            |ZF              |
-| 0x100n           |0x10                   | LDI RA,n             |-               |
-| 0x200n           |0x20                   | LDI RB,n             |-               |
-| 0x300n           |0x30                   | LDI RC,n             |-               |
+| 0x00xn           |0x00                   | LDI ACC,n            |ZF              |
+| 0x10xn           |0x10                   | LDI RA,n             |-               |
+| 0x20xn           |0x20                   | LDI RB,n             |-               |
+| 0x30xn           |0x30                   | LDI RC,n             |-               |
 
-Note that the operand (immediate) is represented by the letter "n".  
-The MAddr nibble is not used with this instruction, so it is left at 0.
+Note:  
+The operand (immediate) is represented by the letter "n".  
+'x' means it doesn't matter.  
 
 <ins>Examples:</ins>
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|-------------|-|
-| 0x0005           | LDI ACC,5   | Load ACC with operand |
-| 0x1006           | LDI RA,6    | Load RA with operand |
-| 0x2007           | LDI RB,7    | Load RB with operand |
-| 0x300a           | LDI RC,10   | Load ACC with operand |
+| 0x0005           | LDI ACC,5   | Load ACC with operand n|
+| 0x1006           | LDI RA,6    | Load RA with operand n|
+| 0x2007           | LDI RB,7    | Load RB with operand n|
+| 0x300a           | LDI RC,10   | Load ACC with operand n|
 
+The MAddr nibble is not used with this instruction, so it is left at 0.  
 The Instruction Word, for example, for LDI RA,6 is coded as,
 ```asm
 0x1006
@@ -141,18 +143,22 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
 ```
 
-**NAND - Nand bit-wise**
+**NAND - bitwise Nand**  
+Performs the bitwise Nand operation between ACC with (OPR, RA, RB or RAM).  
+The result is stored in ACC.  
+
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x010n           |0x01                   | NAND ACC,n           |ZF              |
-| 0x1100           |0x11                   | NAND ACC,RA          |ZF              |
-| 0x210n           |0x21                   | NAND ACC,RB          |ZF              |
-| 0x310n           |0x31                   | NAND ACC,@RAM        |ZF              |
-| 0x7100           |0x71                   | NAND ACC,@R          |ZF              |
+| 0x01xn           |0x01                   | NAND ACC,n           |ZF              |
+| 0x11x0           |0x11                   | NAND ACC,RA          |ZF              |
+| 0x21xn           |0x21                   | NAND ACC,RB          |ZF              |
+| 0x31mn           |0x31                   | NAND ACC,@RAM        |ZF              |
+| 0x71xx           |0x71                   | NAND ACC,@R          |ZF              |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
 The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
 
 <ins>Examples:</ins>
 
@@ -181,18 +187,20 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 
-**LDW - Load from RAM Memory**
+**LDW - Load from RAM Memory**  
+Loads the contents of RAM into ACC.  
+
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|---------------------|----------------|
-| 0x020n           |0x02                   | LDW ACC,@RAM        |ZF              |
-| 0x4200           |0x42                   | LDW ACC,@R          |ZF              |
+| 0x02mn           |0x02                   | LDW ACC,@RAM        |ZF              |
+| 0x42xx           |0x42                   | LDW ACC,@R          |ZF              |
 
 <ins>Examples:</ins>
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
-| 0x023b           | LDW ACC,@0x3b   | Loads the contents of the RAM address (RC:3:b) in ACC             |
-| 0x4206           | LDW ACC,@R      |Loads the contents of the RAM address (RC:RB:RA) in ACC             |
+| 0x023b           | LDW ACC,@0x3b   |Loads the contents of the RAM address (RC:3:b) in ACC   |
+| 0x4200           | LDW ACC,@R      |Loads the contents of the RAM address (RC:RB:RA) in ACC |
 
 The Instruction Word, for example, for LDW ACC,@0x0a is coded as,
 ```asm
@@ -211,7 +219,9 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 
-**LDA - Load Accumulator**
+**LDA - Load Accumulator**  
+Loads the contents of a register into the ACC.  
+Registers: RA, RB or RC  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
@@ -225,9 +235,9 @@ Note: 'x' means it doesn't matter.
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|-------------|-|
-| 0x1300           | LDA RA    | Load RA with operand |
-| 0x2300           | LDA RB    | Load RB with operand |
-| 0x3300           | LDA RC    | Load ACC with operand |
+| 0x1300           | LDA RA    | Load into ACC the content of RA |
+| 0x2300           | LDA RB    | Load into ACC the content of RB |
+| 0x3300           | LDA RC    | Load into ACC the content of RC |
 
 The MAddr/LAddr nibble is not used with this instruction, so it is left at 0.
 
