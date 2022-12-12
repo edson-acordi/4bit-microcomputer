@@ -102,8 +102,9 @@ Thus, the Instruction Word is given as,
 
 ### ###
 **LDI - Load with Immediate**  
-Loads the operand value into a register.  
+Description: Loads the operand value into a register.  
 Registers: ACC, RA, RB or RC  
+Operation: Register <─ Operand
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
@@ -144,8 +145,12 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```
 
 **NAND - bitwise Nand**  
-Performs the bitwise Nand operation between ACC with (OPR, RA, RB or RAM).  
+Description: Performs the bitwise Nand operation between ACC with (Operand n, RA, RB or RAM).  
 The result is stored in ACC.  
+Operations:  
+ACC <─ ACC NAND Operand  
+ACC <─ ACC NAND Register  
+ACC <─ ACC NAND RAM  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
@@ -168,7 +173,7 @@ The MAddr is represented by the letter "m".
 | 0x1106           | NAND ACC,RA     | NAND operation between the accumulator and register RA and stores it in ACC |
 | 0x2107           | NAND ACC,RB     | NAND operation between the accumulator and register RB and stores it in ACC |
 | 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:0:a|
-| 0x710a           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:RB:RA|
+| 0x7100           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for NAND ACC,5 is coded as,
 ```asm
@@ -188,7 +193,8 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```
 
 **LDW - Load from RAM Memory**  
-Loads the contents of RAM into ACC.  
+Description: Loads the contents of RAM into ACC.  
+Operations: ACC <─ RAM  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|---------------------|----------------|
@@ -220,8 +226,9 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```
 
 **LDA - Load Accumulator**  
-Loads the contents of a register into the ACC.  
+Description: Loads the contents of a register into the ACC.  
 Registers: RA, RB or RC  
+Operations: ACC <─ Register
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
