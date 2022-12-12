@@ -194,7 +194,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 
 **LDW - Load from RAM Memory**  
 Description: Loads the contents of RAM into ACC.  
-Operations: ACC <─ RAM  
+Operation: ACC <─ RAM  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|---------------------|----------------|
@@ -228,7 +228,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 **LDA - Load Accumulator**  
 Description: Loads the contents of a register into the ACC.  
 Registers: RA, RB or RC  
-Operations: ACC <─ Register
+Operation: ACC <─ Register
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
