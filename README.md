@@ -265,6 +265,53 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
 ```
 
+**OUTA - Send to OUTA output port**  
+Description: Sends the operand/Register/RAM value to the OUTA output port.  
+Operations:  
+OUTA <─ Operand  
+OUTA <─ ACC  
+OUTA <─ RA  
+OUTA <─ RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|----------------|
+| 0x04xn           |0x04                   | OUTA n               |-              |
+| 0x14xx           |0x14                   | OUTA ACC             |-              |
+| 0x24xn           |0x24                   | OUTA RA              |-              |
+| 0x34mn           |0x34                   | OUTA @RAM            |-              |
+| 0x74xx           |0x74                   | OUTA @R              |-              |
+
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x0405           | OUTA 5        | Sends the operand to the OUTA port |
+| 0x1400           | OUTA ACC      | Sends the ACC to the OUTA port. |
+| 0x2400           | OUTA RA       | Sends the RA to the OUTA port. |
+| 0x342a           | OUTA @0x2a    | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:2:a|
+| 0x7400           | OUTA @R       | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
+
+The Instruction Word, for example, for OUTA ACC is coded as,
+```asm
+0x1400
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 1
+  └─────> Most significant Nibble => HiNB[b15:b12] = 1
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0001 0100 0000 0000
+  ┆    ┆    ┆    └──> Operand = 0
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 4 (OPCode)
+  └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
 ...
 
 # Basic Documentation #
