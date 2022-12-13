@@ -289,12 +289,12 @@ The MAddr is represented by the letter "m".
 <ins>Examples:</ins>
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
-|------------------|---------------|-|
-| 0x0405           | OUTA 5        | Sends the operand to the OUTA port |
-| 0x1400           | OUTA ACC      | Sends the ACC to the OUTA port. |
-| 0x2400           | OUTA RA       | Sends the RA to the OUTA port. |
-| 0x342a           | OUTA @0x2a    | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:2:a|
-| 0x7400           | OUTA @R       | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
+|------------------|-------------|-|
+| 0x0405           | OUTA 5      | Sends the operand to the OUTA port |
+| 0x1400           | OUTA ACC    | Sends the ACC to the OUTA port. |
+| 0x2400           | OUTA RA     | Sends the RA to the OUTA port. |
+| 0x342a           | OUTA @0x2a  | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:2:a|
+| 0x7400           | OUTA @R     | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for OUTA ACC is coded as,
 ```asm
