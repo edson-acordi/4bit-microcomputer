@@ -338,11 +338,11 @@ The MAddr is represented by the letter "m".
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|-------------|-|
-| 0x0507           | OUTB 7      | Sends the operand to the OUTA port |
-| 0x1500           | OUTB ACC    | Sends the ACC to the OUTA port. |
-| 0x2500           | OUTB RA     | Sends the RA to the OUTA port. |
-| 0x35f1           | OUTB @0xf1  | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:f:1|
-| 0x7500           | OUTB @R     | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
+| 0x0507           | OUTB 7      | Sends the operand to the OUTB port |
+| 0x1500           | OUTB ACC    | Sends the ACC to the OUTB port. |
+| 0x2500           | OUTB RA     | Sends the RA to the OUTB port. |
+| 0x35f1           | OUTB @0xf1  | Sends the content of RAM to the OUTB port. In this case, the RAM address = RC:f:1|
+| 0x7500           | OUTB @R     | Sends the content of RAM to the OUTB port. In this case, the RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for OUTB 7 is coded as,
 ```asm
