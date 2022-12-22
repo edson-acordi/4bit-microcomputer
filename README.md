@@ -231,7 +231,7 @@ Registers: RA, RB or RC
 Operation: ACC <─ Register
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
-|------------------|-----------------------|----------------------|----------------|
+|------------------|-----------------------|----------------------|---------------|
 | 0x13xx           |0x13                   | LDA RA             |ZF              |
 | 0x23xx           |0x23                   | LDA RB             |ZF              |
 | 0x33xx           |0x33                   | LDA RC             |ZF              |
@@ -274,7 +274,7 @@ OUTA <─ RA
 OUTA <─ RAM  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
-|------------------|-----------------------|----------------------|----------------|
+|------------------|-----------------------|----------------------|---------------|
 | 0x04xn           |0x04                   | OUTA n               |-              |
 | 0x14xx           |0x14                   | OUTA ACC             |-              |
 | 0x24xn           |0x24                   | OUTA RA              |-              |
@@ -322,7 +322,7 @@ OUTB <─ RA
 OUTB <─ RAM  
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
-|------------------|-----------------------|----------------------|----------------|
+|------------------|-----------------------|----------------------|---------------|
 | 0x05xn           |0x05                   | OUTB n               |-              |
 | 0x15xx           |0x15                   | OUTB ACC             |-              |
 | 0x25xn           |0x25                   | OUTB RA              |-              |
@@ -359,6 +359,54 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 5 (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
+**OUTC - Send to OUTC output port**  
+Description: Sends the operand/Register or RAM value to the OUTC output port.  
+Operations:  
+OUTC <─ Operand  
+OUTC <─ ACC  
+OUTC <─ RA  
+OUTC <─ RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|---------------|
+| 0x06xn           |0x06                   | OUTC n               |-              |
+| 0x16xx           |0x16                   | OUTC ACC             |-              |
+| 0x26xn           |0x26                   | OUTC RA              |-              |
+| 0x36mn           |0x36                   | OUTC @RAM            |-              |
+| 0x76xx           |0x76                   | OUTC @R              |-              |
+
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|-------------|-|
+| 0x0607           | OUTC 0xf    | Sends the operand to the OUTC port |
+| 0x1600           | OUTC ACC    | Sends the ACC to the OUTC port. |
+| 0x2600           | OUTC RA     | Sends the RA to the OUTC port. |
+| 0x3683           | OUTC @0x83  | Sends the content of RAM to the OUTC port. In this case, the RAM address = RC:8:3|
+| 0x7600           | OUTC @R     | Sends the content of RAM to the OUTC port. In this case, the RAM address = RC:RB:RA|
+
+The Instruction Word, for example, for OUTC @0x83 is coded as,
+```asm
+0x3683
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 3
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 8
+  ┆└────> Third Nibble => MICRO[b11:b8] = 6
+  └─────> Most significant Nibble => HiNB[b15:b12] = 3
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0011 0110 1000 0011
+  ┆    ┆    ┆    └──> Operand = 3
+  ┆    ┆    └───────> MAddr = 8 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 6 (OPCode)
+  └─────────────────> HiNB = 3 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 ...
 
