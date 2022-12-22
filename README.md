@@ -54,7 +54,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 - Single Cycle Instruction/RISC
 - Harvard Architecture
 - 3 execution modes:
-   * step
+   * step by step
    * 3MHz (precise time base)
    * adjustable clock speed ( $\approx$ 1 Hz - 200 Hz)
 - No MPU/MCU or complex chips
@@ -266,7 +266,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```
 
 **OUTA - Send to OUTA output port**  
-Description: Sends the operand/Register/RAM value to the OUTA output port.  
+Description: Sends the operand/Register or RAM value to the OUTA output port.  
 Operations:  
 OUTA <─ Operand  
 OUTA <─ ACC  
@@ -301,7 +301,7 @@ The Instruction Word, for example, for OUTA ACC is coded as,
 0x1400
   ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
   ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
-  ┆└────> Third Nibble => MICRO[b11:b8] = 1
+  ┆└────> Third Nibble => MICRO[b11:b8] = 4
   └─────> Most significant Nibble => HiNB[b15:b12] = 1
 ```
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
@@ -311,6 +311,54 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 4 (OPCode)
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
+**OUTB - Send to OUTB output port**  
+Description: Sends the operand/Register or RAM value to the OUTB output port.  
+Operations:  
+OUTB <─ Operand  
+OUTB <─ ACC  
+OUTB <─ RA  
+OUTB <─ RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|----------------|
+| 0x05xn           |0x05                   | OUTB n               |-              |
+| 0x15xx           |0x15                   | OUTB ACC             |-              |
+| 0x25xn           |0x25                   | OUTB RA              |-              |
+| 0x35mn           |0x35                   | OUTB @RAM            |-              |
+| 0x75xx           |0x75                   | OUTB @R              |-              |
+
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|-------------|-|
+| 0x0507           | OUTB 7      | Sends the operand to the OUTA port |
+| 0x1500           | OUTB ACC    | Sends the ACC to the OUTA port. |
+| 0x2500           | OUTB RA     | Sends the RA to the OUTA port. |
+| 0x35f1           | OUTB @0xf1  | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:f:1|
+| 0x7500           | OUTB @R     | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
+
+The Instruction Word, for example, for OUTB 7 is coded as,
+```asm
+0x0507
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 7
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 5
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0001 0101 0000 0111
+  ┆    ┆    ┆    └──> Operand = 7
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 5 (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 ...
 
