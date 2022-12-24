@@ -34,7 +34,9 @@ For the next steps, an important thing is to make good documentation for MikroLe
 -->
 [Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
 
-[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A.pdf "download")
+[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A.pdf "download")  
+
+[Download Bill of Materials (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/MikroLeo_v0.1901_Rev1.01A_BOM.pdf "download")  
 
 ---
 
