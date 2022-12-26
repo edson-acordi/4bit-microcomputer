@@ -545,7 +545,7 @@ Example 5:
 ```asm
 LOOP:  
   LDI RC,3       ;Loads the operand value into the RC Register.
-  STW ACC,@0x21  ;Stores the contents of the accumulator in the RAM address pointed by
+  STW @0x21, ACC ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:MAddr:LAddr, in this case, the RAM address is RC:MAddr:LAddr = 321h.
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
   JPI LOOP       ;Jumps to the specified label.
@@ -622,7 +622,7 @@ LOOP:
   LDI RC,3       ;Loads the operand value into the RC Register.
   LDI RB,2
   LDI RA,1
-  STW ACC,@R     ;Stores the contents of the accumulator in the RAM address pointed by
+  STW @R, ACC    ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:RB:RA, in this case, the RAM address is RC:RB:RA = 321h.
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
   JPI LOOP       ;Jumps to the specified label.
