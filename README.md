@@ -28,7 +28,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 ---
 
 #### The KiCad project files have been uploaded! ####
-[Download KiCad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901.zip "download")  
+[Download KiCad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_KiCad.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
