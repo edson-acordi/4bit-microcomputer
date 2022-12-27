@@ -2,7 +2,7 @@ This folder contains the complete MikroLeo project in KiCad.
 
 Gerber => Folder with MikroLeo's gerber files (for the production of the MikroLeo printed circuit board)  
 
-MikroLeo_v0.1901.zip => Zip file with the MikroLeo project in KiCad  
+MikroLeo_v0.1901_KiCad.zip => Zip file with the MikroLeo project in KiCad  
 
 MikroLeo_v0.1901_Rev1.01A_sch.pdf => Pdf file with the schematic diagram of MikroLeo  
 
