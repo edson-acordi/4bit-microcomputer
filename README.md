@@ -74,7 +74,8 @@ For the next steps, an important thing is to make good documentation for MikroLe
 # MikroLeo Architecture #
 Note that some buffers are used to allow viewing the contents of registers at any time, since this project is mainly intended for educational purposes.  
 
-<img src="https://user-images.githubusercontent.com/60040866/170423097-8096352b-737d-4b8a-93d4-19edffec8095.png" width="85%" height="85%">
+<img src="https://user-images.githubusercontent.com/60040866/209601697-8584d494-3a72-4378-b84d-aec4b7549ddc.png" width="90%" height="90%">
+
 
 # The MikroLeo Instruction Set #
 
