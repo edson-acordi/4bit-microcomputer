@@ -172,11 +172,11 @@ The MAddr is represented by the letter "m".
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
-| 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand and stores it in ACC |
-| 0x1106           | NAND ACC,RA     | NAND operation between the accumulator and register RA and stores it in ACC |
-| 0x2107           | NAND ACC,RB     | NAND operation between the accumulator and register RB and stores it in ACC |
-| 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:0:a|
-| 0x7100           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it in ACC. In this case, the RAM address = RC:RB:RA|
+| 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand and <br> stores it in ACC |
+| 0x1106           | NAND ACC,RA     | NAND operation between the accumulator and register RA and <br> stores it in ACC |
+| 0x2107           | NAND ACC,RB     | NAND operation between the accumulator and register RB and <br>stores it in ACC |
+| 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it <br> in ACC. In this case, the RAM address = RC:0:a|
+| 0x7100           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it <br> in ACC. In this case, the RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for NAND ACC,5 is coded as,
 ```asm
