@@ -296,8 +296,8 @@ The MAddr is represented by the letter "m".
 | 0x0405           | OUTA 5      | Sends the operand to the OUTA port |
 | 0x1400           | OUTA ACC    | Sends the ACC to the OUTA port. |
 | 0x2400           | OUTA RA     | Sends the RA to the OUTA port. |
-| 0x342a           | OUTA @0x2a  | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:2:a|
-| 0x7400           | OUTA @R     | Sends the content of RAM to the OUTA port. In this case, the RAM address = RC:RB:RA|
+| 0x342a           | OUTA @0x2a  | Sends the content of RAM to the OUTA port. In this case, the <br> RAM address = RC:2:a|
+| 0x7400           | OUTA @R     | Sends the content of RAM to the OUTA port. In this case, the <br> RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for OUTA ACC is coded as,
 ```asm
@@ -344,8 +344,8 @@ The MAddr is represented by the letter "m".
 | 0x0507           | OUTB 7      | Sends the operand to the OUTB port |
 | 0x1500           | OUTB ACC    | Sends the ACC to the OUTB port. |
 | 0x2500           | OUTB RA     | Sends the RA to the OUTB port. |
-| 0x35f1           | OUTB @0xf1  | Sends the content of RAM to the OUTB port. In this case, the RAM address = RC:f:1|
-| 0x7500           | OUTB @R     | Sends the content of RAM to the OUTB port. In this case, the RAM address = RC:RB:RA|
+| 0x35f1           | OUTB @0xf1  | Sends the content of RAM to the OUTB port. In this case, the <br> RAM address = RC:f:1|
+| 0x7500           | OUTB @R     | Sends the content of RAM to the OUTB port. In this case, the <br> RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for OUTB 7 is coded as,
 ```asm
@@ -392,8 +392,8 @@ The MAddr is represented by the letter "m".
 | 0x0607           | OUTC 0xf    | Sends the operand to the OUTC port |
 | 0x1600           | OUTC ACC    | Sends the ACC to the OUTC port. |
 | 0x2600           | OUTC RA     | Sends the RA to the OUTC port. |
-| 0x3683           | OUTC @0x83  | Sends the content of RAM to the OUTC port. In this case, the RAM address = RC:8:3|
-| 0x7600           | OUTC @R     | Sends the content of RAM to the OUTC port. In this case, the RAM address = RC:RB:RA|
+| 0x3683           | OUTC @0x83  | Sends the content of RAM to the OUTC port. In this case, the <br> RAM address = RC:8:3|
+| 0x7600           | OUTC @R     | Sends the content of RAM to the OUTC port. In this case, the <br> RAM address = RC:RB:RA|
 
 The Instruction Word, for example, for OUTC @0x83 is coded as,
 ```asm
