@@ -521,26 +521,27 @@ In the MikroLeo python assembler, absolute addresses (`MAddr:LAddr`) are indicat
 Example 1:
 ```asm
 LDI RC,1       ;Loads the operand value into the RC Register.
-OUTA @0xF4     ;Sends the contents of the RAM address pointed to by RC:MAddr:LAddr to output port A,
-               ;in this case, the RAM address is RC:MAddr:LAddr = 1F4h.
+OUTA @0xF4     ;Sends the contents of the RAM address pointed to by RC:MAddr:LAddr to output
+               ;port A, in this case, the RAM address is RC:MAddr:LAddr = 1F4h.
 ```
 Example 2:
 ```asm
 LDI RC,3       ;Loads the operand value into the RC Register.
-ADD ACC,@0xFC  ;Sum the contents of the RAM address pointed to by RC:MAddr:LAddr with ACC and stores
-               ;it in ACC. In this case, the RAM address is RC:MAddr:LAddr = 3FCh.
+ADD ACC,@0xFC  ;Sum the contents of the RAM address pointed to by RC:MAddr:LAddr with ACC
+               ;and stores it in ACC. In this case, the RAM address is RC:MAddr:LAddr = 3FCh.
 ```
 Example 3:  
 ```asm
 LDI RC,1       ;Loads the operand value into the RC Register.
-JPI @0x23      ;Jumps to the specified label. In this case, the label address is RC:MAddr:LAddr = 123h.
+JPI @0x23      ;Jumps to the specified label. In this case, the label address is
+               ;RC:MAddr:LAddr = 123h.
 ```
 Example 4:  
 ```asm
 LDI RC,2       ;Loads the operand value into the RC Register.
 CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
-JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
-               ;RC:MAddr:LAddr = 234h.
+JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label
+               ;address is RC:MAddr:LAddr = 234h.
 ```
 Example 5:  
 ```asm
@@ -548,7 +549,8 @@ LOOP:
   LDI RC,3       ;Loads the operand value into the RC Register.
   STW @0x21, ACC ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:MAddr:LAddr, in this case, the RAM address is RC:MAddr:LAddr = 321h.
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the
+                 ;Register RC.
   JPI LOOP       ;Jumps to the specified label.
 ```
 Example 6:  
@@ -557,16 +559,19 @@ LOOP:
   LDI RC,3       ;Loads the operand value into the RC Register.
   LDW ACC,@0x21  ;Loads the contents of the RAM address pointed by RC:MAddr:LAddr in the
                  ;accumulator, in this case, the RAM address is RC:MAddr:LAddr = 321h.
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the
+                 ;Register RC.
   JPI LOOP
 ```
 Example 7:  
 ```asm
 LOOP:  
   LDI RC,4       ;Loads the operand value into the RC Register.
-  CMP ACC,@0x32  ;Compares the contents of ACC with the contents of the RAM address pointed by RC in
-                 ;this case, the RAM address is RC:MAddr:LAddr = 432h. Is ACC equal to @432h?
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  CMP ACC,@0x32  ;Compares the contents of ACC with the contents of the RAM address
+                 ;pointed by RC in this case, the RAM address is RC:MAddr:LAddr = 432h.
+                 ;Is ACC equal to @432h?
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the
+                 ;Register RC.
   JPZ LOOP       ;Jumps to the specified label if ZF=1 (ACC = @432h).
 ```
 
@@ -577,7 +582,8 @@ In this addressing mode, the `RC` Register points to the high address (b11:b8). 
 The final address is composed by `RC:RB:RA`.  
 
 For example, if:  
-```Thus, the contents of the lower and medium nibble of the instruction (b7:b4, b3:b0) do not matter.
+```Thus, the contents of the lower and medium nibble of the instruction (b7:b4, b3:b0) do
+not matter.
 RC = 3  
 RB = 2  
 RA = 1  
@@ -590,7 +596,8 @@ Example 1:
 LDI RC,1       ;Loads the operand value into the RC Register.
 LDI RB,0xF
 LDI RA,4
-OUTA @R        ;Sends the contents of the RAM address pointed to by RC:RB:RA to output port A,
+OUTA @R        ;Sends the contents of the RAM address pointed to by RC:RB:RA to output
+               ;port A,
                ;in this case, the RAM address is RC:RB:RA = 1F4h.
 ```
 Example 2:
@@ -598,15 +605,16 @@ Example 2:
 LDI RC,3       ;Loads the operand value into the RC Register.
 LDI RB,0xF
 LDI RA,0xC
-ADD ACC,@R     ;Sum the contents of the RAM address pointed to by RC:RB:RA with ACC and stores
-               ;it in ACC. In this case, the RAM address is RC:RB:RA = 3FCh.
+ADD ACC,@R     ;Sum the contents of the RAM address pointed to by RC:RB:RA with ACC
+               ;and stores it in ACC. In this case, the RAM address is RC:RB:RA = 3FCh.
 ```
 Example 3:  
 ```asm
 LDI RC,1       ;Loads the operand value into the RC Register.
 LDI RB,2
 LDI RA,3
-JPI @R         ;Jumps to the specified label. In this case, the label address is RC:RB:RA = 123h.
+JPI @R         ;Jumps to the specified label. In this case, the label address is
+               ;RC:RB:RA = 123h.
 ```
 Example 4:  
 ```asm
@@ -614,8 +622,8 @@ LDI RC,2       ;Loads the operand value into the RC Register.
 LDI RB,3
 LDI RA,4
 CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
-JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label address is
-               ;RC:RB:RA = 234h.
+JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the
+               ;label address is RC:RB:RA = 234h.
 ```
 Example 5:  
 ```asm
@@ -625,7 +633,8 @@ LOOP:
   LDI RA,1
   STW @R, ACC    ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:RB:RA, in this case, the RAM address is RC:RB:RA = 321h.
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of
+                 ;the Register RC.
   JPI LOOP       ;Jumps to the specified label.
 ```
 Example 6:  
@@ -636,7 +645,8 @@ LOOP:
   LDI RA,1
   LDW ACC,@R     ;Loads the contents of the RAM address pointed by RC:RB:RA in the
                  ;accumulator, in this case, the RAM address is RC:RB:RA = 321h.
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of
+                 ;the Register RC.
   JPI LOOP
 ```
 Example 7:  
@@ -645,9 +655,11 @@ LOOP:
   LDI RC,4       ;Loads the operand value into the RC Register.
   LDI RB,3
   LDI RA,2
-  CMP ACC,@R     ;Compares the contents of ACC with the contents of the RAM address pointed by RC in
-                 ;this case, the RAM address is RC:RB:RA = 432h. Is ACC equal to @432h?
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the Register RC.
+  CMP ACC,@R     ;Compares the contents of ACC with the contents of the RAM address
+                 ;pointed by RC in this case, the RAM address is RC:RB:RA = 432h.
+                 ;Is ACC equal to @432h?
+  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents
+                 ;of the Register RC.
   JPZ LOOP       ;Jumps to the specified label if ZF=1 (ACC = @432h).
 ```
 
