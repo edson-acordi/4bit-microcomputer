@@ -99,7 +99,7 @@ ROML (Least significant byte of program memory):
 
 $\text{\small\textcolor{brown}{- Note: b15 = bit15 ... b0 = bit0}}$
 
-Thus, the Instruction Word is given as,  
+Below is more detailed information about the instruction word,  
 
 <img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="50%" height="50%">  
 
