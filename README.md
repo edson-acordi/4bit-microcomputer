@@ -101,7 +101,7 @@ $\text{\small\textcolor{brown}{- Note: b15 = bit15 ... b0 = bit0}}$
 
 Below is more detailed information about the instruction word,  
 
-<img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="50%" height="50%">  
+<img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="55%" height="55%">  
 
 ### ###
 **LDI - Load with Immediate**  
