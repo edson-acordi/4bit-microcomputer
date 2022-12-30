@@ -10,10 +10,10 @@
 <!-- This is a comment -->
 
 The hardware is finished and working.  
-However, it needs exhaustive testing over a long period to see if the hardware will fail when operating at full speed.  
-It implies that if the hardware fails, the maximum clock speed must be reduced, for example, to 2.5 MHz.  
+However, it needs exhaustive testing over a long period to see if the hardware will fail when operating at full speed. It implies that if the hardware fails, the maximum clock speed must be reduced, for example, to 2.5 MHz.  
 
 This project was developed mainly for educational purposes.  
+
 I hope it will be a good learning platform for anyone who likes electronics, computers and programming.  
 
 Since my first attempts, many efforts have been made to make this project real.  
