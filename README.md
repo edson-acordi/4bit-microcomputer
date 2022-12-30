@@ -411,6 +411,47 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    └────────────> MICRO = 6 (OPCode)
   └─────────────────> HiNB = 3 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
+
+**LDR - Loads a Register with the Accumulator.**  
+Description: Load the contents of the ACC into a register.  
+Registers: RA, RB or RC  
+Operation: Register <─ ACC
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|---------------|
+| 0x17xx           |0x17                   | LDR RA               |-              |
+| 0x27xx           |0x27                   | LDR RB               |-              |
+| 0x37xx           |0x37                   | LDR RC               |-              |
+
+Note: 'x' means it doesn't matter.
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|-------------|-|
+| 0x1700           | LDR RA    | Load into RA the content of ACC |
+| 0x2700           | LDR RB    | Load into RB the content of ACC |
+| 0x3700           | LDR RC    | Load into RC the content of ACC |
+
+The MAddr/LAddr nibble is not used with this instruction, so it is left at 0.
+
+The Instruction Word, for example, for LDR RA is coded as,
+```asm
+0x1700
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 7
+  └─────> Most significant Nibble => HiNB[b15:b12] = 1
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0001 0111 0000 0000
+  ┆    ┆    ┆    └──> Operand = 0 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 7 (OPCode)
+  └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+```
+
 ...
 
 # Basic Documentation #
