@@ -65,7 +65,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 - Program memory implemented with RAM to easy programming
 - It accepts 300 and 600 mils memories (for those with old DIP versions)
 - Supercapacitor or battery to keep the program in RAM (for low power version)
-- It can be manually programmed by switches or via Arduino/Esp32
+- It can be programmed using physical input switches or via Arduino/Esp32
 - Built with 74HCTxxx integrated circuits for low power consumption and compatibility with TTL circuits
 - All parts are through-hole for easy assembly
 - All control signals, registers and the program counter are available through the pin header connectors
