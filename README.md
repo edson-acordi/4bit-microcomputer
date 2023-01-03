@@ -30,15 +30,16 @@ For the next steps, an important thing is to make good documentation for MikroLe
 ---
 
 #### The KiCad project files have been uploaded! ####
-[Download KiCad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_KiCad.zip "download")  
+1-[Download KiCad Project](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_KiCad.zip "download")  
 <!--
 [![Download](auxiliary/download.svg)](https://github.com/edson-acordi/4bit-microcomputer/Kicad-files/MikroLeo/MikroLeo/archive/MikroLeo_v0.1901.zip)
 -->
-[Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
+2-[Download Gerber Files](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/Gerber/MikroLeo_v0.1901_Rev1.01A_Gerber.zip "download")  
 
-[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A_sch.pdf "download")  
+3-[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A_sch.pdf "download")  
 
-[Download Bill of Materials (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/MikroLeo_v0.1901_Rev1.01A_BOM.pdf "download")  
+4-[Download Bill of Materials (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/MikroLeo_v0.1901_Rev1.01A_BOM.pdf "download")  
+&nbsp;&nbsp; └─>[Components list made by @vguttmann at the Mouser Electronics store](https://www.mouser.de/ProjectManager/ProjectDetail.aspx?State=EDIT&ProjectGUID=436f56c7-ebe0-469b-b287-6e751369f9cc)
 
 ---
 
