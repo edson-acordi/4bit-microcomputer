@@ -114,14 +114,15 @@ Operation: Register <─ Operand
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x00xn           |0x00                   | LDI ACC,n            |ZF              |
-| 0x10xn           |0x10                   | LDI RA,n             |-               |
-| 0x20xn           |0x20                   | LDI RB,n             |-               |
-| 0x30xn           |0x30                   | LDI RC,n             |-               |
+| 0x00Xn           |0x00                   | LDI ACC,n            |ZF              |
+| 0x10Xn           |0x10                   | LDI RA,n             |-               |
+| 0x20Xn           |0x20                   | LDI RB,n             |-               |
+| 0x30Xn           |0x30                   | LDI RC,n             |-               |
 
 Note:  
 The operand (immediate) is represented by the letter "n".  
-'x' means it doesn't matter.  
+'X' (in capital letter) means it doesn't matter.  
+'x' (in lowercase) is used to represent a hexadecimal number.
 
 <ins>Examples:</ins>
 
@@ -160,11 +161,11 @@ ACC <─ ACC NAND RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x01xn           |0x01                   | NAND ACC,n           |ZF              |
-| 0x11xx           |0x11                   | NAND ACC,RA          |ZF              |
-| 0x21xx           |0x21                   | NAND ACC,RB          |ZF              |
+| 0x01Xn           |0x01                   | NAND ACC,n           |ZF              |
+| 0x11XX           |0x11                   | NAND ACC,RA          |ZF              |
+| 0x21XX           |0x21                   | NAND ACC,RB          |ZF              |
 | 0x31mn           |0x31                   | NAND ACC,@RAM        |ZF              |
-| 0x71xx           |0x71                   | NAND ACC,@R          |ZF              |
+| 0x71XX           |0x71                   | NAND ACC,@R          |ZF              |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -205,7 +206,7 @@ Operation: ACC <─ RAM
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|---------------------|----------------|
 | 0x02mn           |0x02                   | LDW ACC,@RAM        |ZF              |
-| 0x42xx           |0x42                   | LDW ACC,@R          |ZF              |
+| 0x42XX           |0x42                   | LDW ACC,@R          |ZF              |
 
 <ins>Examples:</ins>
 
@@ -238,9 +239,9 @@ Operation: ACC <─ Register
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|---------------|
-| 0x13xx           |0x13                   | LDA RA             |ZF              |
-| 0x23xx           |0x23                   | LDA RB             |ZF              |
-| 0x33xx           |0x33                   | LDA RC             |ZF              |
+| 0x13XX           |0x13                   | LDA RA             |ZF              |
+| 0x23XX           |0x23                   | LDA RB             |ZF              |
+| 0x33XX           |0x33                   | LDA RC             |ZF              |
 
 Note: 'x' means it doesn't matter.
 
@@ -281,11 +282,11 @@ OUTA <─ RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|---------------|
-| 0x04xn           |0x04                   | OUTA n               |-              |
-| 0x14xx           |0x14                   | OUTA ACC             |-              |
-| 0x24xn           |0x24                   | OUTA RA              |-              |
+| 0x04Xn           |0x04                   | OUTA n               |-              |
+| 0x14XX           |0x14                   | OUTA ACC             |-              |
+| 0x24Xn           |0x24                   | OUTA RA              |-              |
 | 0x34mn           |0x34                   | OUTA @RAM            |-              |
-| 0x74xx           |0x74                   | OUTA @R              |-              |
+| 0x74XX           |0x74                   | OUTA @R              |-              |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -329,11 +330,11 @@ OUTB <─ RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|---------------|
-| 0x05xn           |0x05                   | OUTB n               |-              |
-| 0x15xx           |0x15                   | OUTB ACC             |-              |
-| 0x25xn           |0x25                   | OUTB RA              |-              |
+| 0x05Xn           |0x05                   | OUTB n               |-              |
+| 0x15XX           |0x15                   | OUTB ACC             |-              |
+| 0x25Xn           |0x25                   | OUTB RA              |-              |
 | 0x35mn           |0x35                   | OUTB @RAM            |-              |
-| 0x75xx           |0x75                   | OUTB @R              |-              |
+| 0x75XX           |0x75                   | OUTB @R              |-              |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -377,11 +378,11 @@ OUTC <─ RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|---------------|
-| 0x06xn           |0x06                   | OUTC n               |-              |
-| 0x16xx           |0x16                   | OUTC ACC             |-              |
-| 0x26xn           |0x26                   | OUTC RA              |-              |
+| 0x06Xn           |0x06                   | OUTC n               |-              |
+| 0x16XX           |0x16                   | OUTC ACC             |-              |
+| 0x26Xn           |0x26                   | OUTC RA              |-              |
 | 0x36mn           |0x36                   | OUTC @RAM            |-              |
-| 0x76xx           |0x76                   | OUTC @R              |-              |
+| 0x76XX           |0x76                   | OUTC @R              |-              |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -422,9 +423,9 @@ Operation: Register <─ ACC
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|---------------|
-| 0x17xx           |0x17                   | LDR RA               |-              |
-| 0x27xx           |0x27                   | LDR RB               |-              |
-| 0x37xx           |0x37                   | LDR RC               |-              |
+| 0x17XX           |0x17                   | LDR RA               |-              |
+| 0x27XX           |0x27                   | LDR RB               |-              |
+| 0x37XX           |0x37                   | LDR RC               |-              |
 
 Note: 'x' means it doesn't matter.
 
@@ -466,11 +467,11 @@ ACC - RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x08xn           |0x01                   | CMP ACC,n            |CF,ZF           |
-| 0x18xx           |0x11                   | CMP ACC,RA           |CF,ZF           |
-| 0x28xn           |0x21                   | CMP ACC,RB           |CF,ZF           |
+| 0x08Xn           |0x01                   | CMP ACC,n            |CF,ZF           |
+| 0x18XX           |0x11                   | CMP ACC,RA           |CF,ZF           |
+| 0x28XX           |0x21                   | CMP ACC,RB           |CF,ZF           |
 | 0x38mn           |0x31                   | CMP ACC,@RAM         |CF,ZF           |
-| 0x78xx           |0x71                   | CMP ACC,@R           |CF,ZF           |
+| 0x78XX           |0x71                   | CMP ACC,@R           |CF,ZF           |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -640,7 +641,7 @@ Example 5:
 ```asm
 LOOP:  
   LDI RC,3       ;Loads the operand value into the RC Register.
-  STW @0x21, ACC ;Stores the contents of the accumulator in the RAM address pointed by
+  STW @0x21,ACC  ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:MAddr:LAddr, in this case, the RAM address is RC:MAddr:LAddr = 321h.
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the
                  ;Register RC.
@@ -724,7 +725,7 @@ LOOP:
   LDI RC,3       ;Loads the operand value into the RC Register.
   LDI RB,2
   LDI RA,1
-  STW @R, ACC    ;Stores the contents of the accumulator in the RAM address pointed by
+  STW @R,ACC     ;Stores the contents of the accumulator in the RAM address pointed by
                  ;RC:RB:RA, in this case, the RAM address is RC:RB:RA = 321h.
   LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of
                  ;the Register RC.
