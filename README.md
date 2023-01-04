@@ -161,8 +161,8 @@ ACC <─ ACC NAND RAM
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
 | 0x01xn           |0x01                   | NAND ACC,n           |ZF              |
-| 0x11x0           |0x11                   | NAND ACC,RA          |ZF              |
-| 0x21xn           |0x21                   | NAND ACC,RB          |ZF              |
+| 0x11xx           |0x11                   | NAND ACC,RA          |ZF              |
+| 0x21xx           |0x21                   | NAND ACC,RB          |ZF              |
 | 0x31mn           |0x31                   | NAND ACC,@RAM        |ZF              |
 | 0x71xx           |0x71                   | NAND ACC,@R          |ZF              |
 
@@ -176,8 +176,8 @@ The MAddr is represented by the letter "m".
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
 | 0x0105           | NAND ACC,5      | NAND operation between the accumulator and the operand and <br> stores it in ACC |
-| 0x1106           | NAND ACC,RA     | NAND operation between the accumulator and register RA and <br> stores it in ACC |
-| 0x2107           | NAND ACC,RB     | NAND operation between the accumulator and register RB and <br>stores it in ACC |
+| 0x1100           | NAND ACC,RA     | NAND operation between the accumulator and register RA and <br> stores it in ACC |
+| 0x2100           | NAND ACC,RB     | NAND operation between the accumulator and register RB and <br>stores it in ACC |
 | 0x310a           | NAND ACC,@0x0a  | NAND the contents of the RAM address with ACC and stores it <br> in ACC. In this case, the RAM address = RC:0:a|
 | 0x7100           | NAND ACC,@R     | NAND the contents of the RAM address with ACC and stores it <br> in ACC. In this case, the RAM address = RC:RB:RA|
 
@@ -453,6 +453,55 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 7 (OPCode)
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
+```
+
+**CMP - compare ACC**  
+Description: Performs the comparison between ACC with (Operand n, RA, RB or RAM).  
+The comparison is like a Subtraction, but it doesn't change the ACC.
+The comparison result can be checked by Flags.
+Operations:  
+ACC - Operand  
+ACC - Register  
+ACC - RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|----------------|
+| 0x08xn           |0x01                   | CMP ACC,n            |CF,ZF           |
+| 0x18xx           |0x11                   | CMP ACC,RA           |CF,ZF           |
+| 0x28xn           |0x21                   | CMP ACC,RB           |CF,ZF           |
+| 0x38mn           |0x31                   | CMP ACC,@RAM         |CF,ZF           |
+| 0x78xx           |0x71                   | CMP ACC,@R           |CF,ZF           |
+
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x0801           | CMP ACC,1      | Compare ACC with operand n |
+| 0x1800           | CMP ACC,RA     | Compare ACC with register RA |
+| 0x2800           | CMP ACC,RB     | Compare ACC with register RB |
+| 0x38b3           | CMP ACC,@0xb3  | Compare ACC with RAM address. In this case, the RAM <br> address = RC:b:3|
+| 0x7100           | CMP ACC,@R     | Compare ACC with RAM address. In this case, the RAM <br> address = RC:RB:RA|
+
+The Instruction Word, for example, for CMP ACC,1 is coded as,
+```asm
+0x0801
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 1
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 8
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0000 1000 0000 0001
+  ┆    ┆    ┆    └──> Operand = 1
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 8 (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 
 ...
