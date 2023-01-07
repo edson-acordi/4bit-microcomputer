@@ -865,7 +865,11 @@ https://creativecommons.org/licenses/by-sa/4.0/
 As this project is intended for educational purposes, I have decided to use the CERN-OHL-S license for hardware to ensure that it is always free, contributing, promoting and disseminating the essential knowledge. As such, all hardware derived from it will also be open source!  
 Likewise, for the software, the GNU GPL license was used.
 
----
+## Contact ##
+
+***Note:*** If you have any questions, please consider opening an issue first, as your question may be helpful to others.  
+[email](mailto:mikroleo.cpu@gmail.com)
+
 ## Visitor count
 <!-- This is a comment ![Visitor Count](https://profile-counter.glitch.me/{edson-acordi}/count.svg)
  -->
