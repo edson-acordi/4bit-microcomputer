@@ -530,7 +530,7 @@ The MAddr is represented by the letter "m".
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|-------------|-|
-| 0x090b           | OUTD b      | Sends the operand to the OUTD port |
+| 0x090b           | OUTD 0xb    | Sends the operand to the OUTD port |
 | 0x1900           | OUTD ACC    | Sends the ACC to the OUTD port. |
 | 0x2900           | OUTD RA     | Sends the RA to the OUTD port. |
 | 0x39c3           | OUTD @0xc3  | Sends the content of RAM to the OUTD port. In this case, the <br> RAM address = RC:c:3|
