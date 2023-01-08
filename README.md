@@ -413,7 +413,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    ┆    └──> Operand = 3
   ┆    ┆    └───────> MAddr = 8 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 6 (OPCode)
-  └─────────────────> HiNB = 3 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+  └─────────────────> HiNB = 3 (MICRO2_IN = 0, AMODE = 0, MOD = 3)
 ```
 
 **LDR - Loads a Register with the Accumulator.**  
@@ -503,6 +503,54 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 8 (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
+**OUTD - Send to OUTD output port**  
+Description: Sends the operand/Register or RAM value to the OUTD output port.  
+Operations:  
+OUTD <─ Operand  
+OUTD <─ ACC  
+OUTD <─ RA  
+OUTD <─ RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|----------------------|---------------|
+| 0x09Xn           |0x09                   | OUTD n               |-              |
+| 0x19XX           |0x19                   | OUTD ACC             |-              |
+| 0x29XX           |0x29                   | OUTD RA              |-              |
+| 0x39mn           |0x39                   | OUTD @RAM            |-              |
+| 0x79XX           |0x79                   | OUTD @R              |-              |
+
+Note:  
+The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
+The RAM address for @R is pointed by RC:RB:RA.  
+The MAddr is represented by the letter "m".  
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|-------------|-|
+| 0x090b           | OUTD b      | Sends the operand to the OUTD port |
+| 0x1900           | OUTD ACC    | Sends the ACC to the OUTD port. |
+| 0x2900           | OUTD RA     | Sends the RA to the OUTD port. |
+| 0x39c3           | OUTD @0xc3  | Sends the content of RAM to the OUTD port. In this case, the <br> RAM address = RC:c:3|
+| 0x7900           | OUTD @R     | Sends the content of RAM to the OUTD port. In this case, the <br> RAM address = RC:RB:RA|
+
+The Instruction Word, for example, for OUTD @R is coded as,
+```asm
+0x7900
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = 9
+  └─────> Most significant Nibble => HiNB[b15:b12] = 7
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0111 1001 0000 0000
+  ┆    ┆    ┆    └──> Operand = 0
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = 9 (OPCode)
+  └─────────────────> HiNB = 7 (MICRO2_IN = 0, AMODE = 1, MOD = 3)
 ```
 
 ...
