@@ -553,6 +553,39 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 7 (MICRO2_IN = 0, AMODE = 1, MOD = 3)
 ```
 
+**STW - Store in RAM Memory**  
+Description: Stores the contents of the ACC in RAM.  
+Operation: RAM <─ ACC    
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|---------------------|----------------|
+| 0x0Amn           |0x0A                   | STW @RAM,ACC        |-               |
+| 0x4AXX           |0x4A                   | STW @R,ACC          |-               |
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x0A1f           | STW @0x1f,ACC   |Stores the contents of the ACC in RAM (address RC:1:f)  |
+| 0x4200           | STW @R,ACC      |Stores the contents of the ACC in RAM (address RC:RB:RA)|
+
+The Instruction Word, for example, for STW @0x1f,ACC is coded as,
+```asm
+0x0A1f
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = f
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 1
+  ┆└────> Third Nibble => MICRO[b11:b8] = A
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0000 1010 0001 1111
+  ┆    ┆    ┆    └──> Operand = f
+  ┆    ┆    └───────> MAddr = 1 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = A (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
 ...
 
 # Basic Documentation #
