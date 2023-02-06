@@ -1,5 +1,5 @@
 // =================================================================================
-// This program is used to transfer a compiled program (hex codes)to MikroLeo
+// This program is used to transfer a compiled program (hex codes) to MikroLeo
 // using Arduino Mega 2560
 //
 // Visit the project's repository and support it!
