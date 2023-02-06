@@ -843,7 +843,7 @@ Released!
 See examples how to use...
 
 # How to transfer compiled program to MikroLeo #
-Almost ready...:soon:
+[Download documentation (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/How%20to%20transfer%20a%20compiled%20program%20to%20MikroLeo.pdf "download")  
 
 # Emulator #
 In progress...🚧
