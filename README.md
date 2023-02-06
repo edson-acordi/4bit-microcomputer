@@ -56,7 +56,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 ---
 
 #### The Arduino program to transfer a compiled program to MikroLeo ####
-[Download documentation (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Arduino/MikroLeo_Program_Writring.ino "download")  
+[Code (Arduino IDE)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Arduino/MikroLeo_Program_Writring.ino "download")  
 
 ---
 
