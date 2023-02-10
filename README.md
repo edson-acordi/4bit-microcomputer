@@ -726,7 +726,7 @@ Example 4:
 LDI RC,2       ;Loads the operand value into the RC Register.
 CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
 JPZ @0x34      ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the label
-               ;address is RC:MAddr:LAddr = 234h.
+               ;address is PCH:MAddr:LAddr = PCH:34h. JPZ does not affect PCH.
 ```
 Example 5:  
 ```asm
@@ -755,8 +755,6 @@ LOOP:
   CMP ACC,@0x32  ;Compares the contents of ACC with the contents of the RAM address
                  ;pointed by RC in this case, the RAM address is RC:MAddr:LAddr = 432h.
                  ;Is ACC equal to @432h?
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents of the
-                 ;Register RC.
   JPZ LOOP       ;Jumps to the specified label if ZF=1 (ACC = @432h).
 ```
 
@@ -808,7 +806,7 @@ LDI RB,3
 LDI RA,4
 CMP ACC,0      ;Compares the contents of ACC with the operand. Is ACC equal to 0?
 JPZ @R         ;Jumps to the specified label if ZF=1 (ACC = 0). In this case, the
-               ;label address is RC:RB:RA = 234h.
+               ;label address is PCH:RB:RA = PCH:34h. JPZ does not affect PCH.
 ```
 Example 5:  
 ```asm
@@ -843,8 +841,6 @@ LOOP:
   CMP ACC,@R     ;Compares the contents of ACC with the contents of the RAM address
                  ;pointed by RC in this case, the RAM address is RC:RB:RA = 432h.
                  ;Is ACC equal to @432h?
-  LDI RC,>LOOP   ;Gets the address of the label, as this code changes the contents
-                 ;of the Register RC.
   JPZ LOOP       ;Jumps to the specified label if ZF=1 (ACC = @432h).
 ```
 
