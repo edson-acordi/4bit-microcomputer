@@ -496,7 +496,7 @@ The MAddr is represented by the letter "m".
 | 0x1800           | CMP ACC,RA     | Compare ACC with register RA |
 | 0x2800           | CMP ACC,RB     | Compare ACC with register RB |
 | 0x38b3           | CMP ACC,@0xb3  | Compare ACC with RAM address. In this case, the RAM <br> address = RC: b:3 |
-| 0x7100           | CMP ACC,@R     | Compare ACC with RAM address. In this case, the RAM <br> address = RC:RB:RA |
+| 0x7800           | CMP ACC,@R     | Compare ACC with RAM address. In this case, the RAM <br> address = RC:RB:RA |
 
 The Instruction Word, for example, for CMP ACC,1 is coded as,
 ```asm
