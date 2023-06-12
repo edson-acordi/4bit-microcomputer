@@ -577,7 +577,7 @@ Operation: RAM <─ ACC
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
 | 0x0A1f           | STW @0x1f,ACC   |Stores the contents of the ACC in RAM (address RC:1:f)  |
-| 0x4200           | STW @R,ACC      |Stores the contents of the ACC in RAM (address RC:RB:RA)|
+| 0x4A00           | STW @R,ACC      |Stores the contents of the ACC in RAM (address RC:RB:RA)|
 
 The Instruction Word, for example, for STW @0x1f,ACC is coded as,
 ```asm
