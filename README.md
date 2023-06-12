@@ -253,7 +253,7 @@ Operation: ACC <─ Register
 | 0x23XX           |0x23                   | LDA RB             |ZF              |
 | 0x33XX           |0x33                   | LDA RC             |ZF              |
 
-Note: 'x' means it doesn't matter.
+Note: 'X' means it doesn't matter.
 
 <ins>Examples:</ins>
 
@@ -437,7 +437,7 @@ Operation: Register <─ ACC
 | 0x27XX           |0x27                   | LDR RB               |-              |
 | 0x37XX           |0x37                   | LDR RC               |-              |
 
-Note: 'x' means it doesn't matter.
+Note: 'X' means it doesn't matter.
 
 <ins>Examples:</ins>
 
