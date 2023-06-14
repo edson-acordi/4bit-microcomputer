@@ -15,5 +15,7 @@
 
 ## **Third steps:** ##
 - Control Unit (UC)
-<img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/295b0a52-9b02-4270-a238-3d60fdfb3153" width="50%" height="50%" rotate="90">
+<img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/295b0a52-9b02-4270-a238-3d60fdfb3153" width="50%" height="50%" rotate="90">  
+<img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/a850945f-c75f-4746-a0a2-2b9d556ac821" width="50%" height="50%" rotate="90">  
+
 
