@@ -596,6 +596,43 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 
+**SUB - Subtract with accumulator**  
+Description: Subtracts the accumulator contents from the operand and stores the result in the accumulator..  
+Operation:  
+ACC <─ ACC - Operand  
+ACC <─ ACC - Register  
+ACC <─ ACC - RAM  
+
+| <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
+|------------------|-----------------------|---------------------|----------------|
+| 0x0BXn           |0x0B                   | SUB ACC,n           |-               |
+| 0x4AXX           |0x4A                   | SUB ACC,ACC          |-               |
+
+<ins>Examples:</ins>
+
+| **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
+|------------------|---------------|-|
+| 0x0B           | SUB @0x1f,ACC   |  |
+| 0x           | SUB @R,ACC      |S|
+
+The Instruction Word, for example, for STW @0x1f,ACC is coded as,
+```asm
+0x
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 
+  ┆└────> Third Nibble => MICRO[b11:b8] = 
+  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+```
+Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
+```asm
+0000 1010 0001 1111
+  ┆    ┆    ┆    └──> Operand = 
+  ┆    ┆    └───────> MAddr =  (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO =  (OPCode)
+  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+```
+
+
 ...
 
 # Basic Documentation #
