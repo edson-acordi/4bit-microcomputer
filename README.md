@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test-92%25-green>  <img src=https://img.shields.io/badge/Hardware%20License-CERN--OHL--S-brightgreen>  <img src=https://img.shields.io/badge/Software%20License-GNU%20GPL-ff0000>  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(you liked OR want to suppport)&style=style=flat&color=9933FF" alt="Star Badge">  
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test-96%25-green>  <img src=https://img.shields.io/badge/Hardware%20License-CERN--OHL--S-brightgreen>  <img src=https://img.shields.io/badge/Software%20License-GNU%20GPL-ff0000>  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(you liked OR want to suppport)&style=style=flat&color=9933FF" alt="Star Badge">  
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
@@ -225,7 +225,7 @@ Operation: ACC <─ RAM
 | 0x023b           | LDW ACC,@0x3b   |Loads the contents of the RAM address (RC:3:b) in ACC   |
 | 0x4200           | LDW ACC,@R      |Loads the contents of the RAM address (RC:RB:RA) in ACC |
 
-The Instruction Word, for example, for LDW ACC,@0x0a is coded as,
+The Instruction Word, for example, for LDW ACC,@0x3b is coded as,
 ```asm
 0x023b
   ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = b
@@ -237,7 +237,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```asm
 0000 0010 0011 1011
   ┆    ┆    ┆    └──> Operand = b
-  ┆    ┆    └───────> MAddr = 3 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 3
   ┆    └────────────> MICRO = 2 (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
@@ -421,7 +421,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```asm
 0011 0110 1000 0011
   ┆    ┆    ┆    └──> Operand = 3
-  ┆    ┆    └───────> MAddr = 8 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 8
   ┆    └────────────> MICRO = 6 (OPCode)
   └─────────────────> HiNB = 3 (MICRO2_IN = 0, AMODE = 0, MOD = 3)
 ```
@@ -466,10 +466,10 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
   └─────────────────> HiNB = 1 (MICRO2_IN = 0, AMODE = 0, MOD = 1)
 ```
 
-**CMP - compare ACC**  
+**CMP - Compare ACC**  
 Description: Performs the comparison between ACC with (Operand n, RA, RB or RAM).  
 The comparison is like a Subtraction, but it doesn't change the ACC.
-The comparison result can be checked by Flags.
+The comparison result can be checked by Flags.  
 Operations:  
 ACC - Operand  
 ACC - Register  
@@ -477,11 +477,11 @@ ACC - RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|----------------------|----------------|
-| 0x08Xn           |0x01                   | CMP ACC,n            |CF,ZF           |
-| 0x18XX           |0x11                   | CMP ACC,RA           |CF,ZF           |
-| 0x28XX           |0x21                   | CMP ACC,RB           |CF,ZF           |
-| 0x38mn           |0x31                   | CMP ACC,@RAM         |CF,ZF           |
-| 0x78XX           |0x71                   | CMP ACC,@R           |CF,ZF           |
+| 0x08Xn           |0x08                   | CMP ACC,n            |CF,ZF           |
+| 0x18XX           |0x18                   | CMP ACC,RA           |CF,ZF           |
+| 0x28XX           |0x28                   | CMP ACC,RB           |CF,ZF           |
+| 0x38mn           |0x38                   | CMP ACC,@RAM         |CF,ZF           |
+| 0x78XX           |0x78                   | CMP ACC,@R           |CF,ZF           |
 
 Note:  
 The RAM address for @RAM is pointed by RC:MAddr:LAddr.  
@@ -495,7 +495,7 @@ The MAddr is represented by the letter "m".
 | 0x0801           | CMP ACC,1      | Compare ACC with operand n |
 | 0x1800           | CMP ACC,RA     | Compare ACC with register RA |
 | 0x2800           | CMP ACC,RB     | Compare ACC with register RB |
-| 0x38b3           | CMP ACC,@0xb3  | Compare ACC with RAM address. In this case, the RAM <br> address = RC: b:3 |
+| 0x38c3           | CMP ACC,@0xc3  | Compare ACC with RAM address. In this case, the RAM <br> address = RC:c:3 |
 | 0x7800           | CMP ACC,@R     | Compare ACC with RAM address. In this case, the RAM <br> address = RC:RB:RA |
 
 The Instruction Word, for example, for CMP ACC,1 is coded as,
@@ -557,7 +557,7 @@ The Instruction Word, for example, for OUTD @R is coded as,
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
 ```asm
 0111 1001 0000 0000
-  ┆    ┆    ┆    └──> Operand = 0
+  ┆    ┆    ┆    └──> Operand = 0 (For this instruction, it doesn't matter)
   ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
   ┆    └────────────> MICRO = 9 (OPCode)
   └─────────────────> HiNB = 7 (MICRO2_IN = 0, AMODE = 1, MOD = 3)
@@ -591,13 +591,13 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 ```asm
 0000 1010 0001 1111
   ┆    ┆    ┆    └──> Operand = f
-  ┆    ┆    └───────> MAddr = 1 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 1
   ┆    └────────────> MICRO = A (OPCode)
   └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
 ```
 
-**SUB - Subtract with accumulator**  
-Description: Subtracts the accumulator contents from the operand and stores the result in the accumulator..  
+**SUB - Subtract from accumulator**  
+Description: Subtracts from the accumulator the content of (Operand n, RA, RB or RAM) and stores the result in the accumulator.  
 Operation:  
 ACC <─ ACC - Operand  
 ACC <─ ACC - Register  
@@ -605,31 +605,37 @@ ACC <─ ACC - RAM
 
 | <sub>Instruction Word</sub> | <sub>ROMH</sub> |      <sub>Instruction</sub>     | <sub>Affected Flags</sub> |
 |------------------|-----------------------|---------------------|----------------|
-| 0x0BXn           |0x0B                   | SUB ACC,n           |-               |
-| 0x4AXX           |0x4A                   | SUB ACC,ACC          |-               |
+| 0x0BXn           |0x0B                   | SUB ACC,n           |CF,ZF           |
+| 0x1BXX           |0x1B                   | SUB ACC,RA          |CF,ZF           |
+| 0x2BXX           |0x2B                   | SUB ACC,RB          |CF,ZF           |
+| 0x3Bmn           |0x3B                   | SUB ACC,@RAM        |CF,ZF           |
+| 0x7BXX           |0x7B                   | SUB ACC,@R          |CF,ZF           |
 
 <ins>Examples:</ins>
 
 | **<sub>Instruction Word</sub>** | **<sub>Instruction</sub>** |              **<sub>Comment</sub>**            |
 |------------------|---------------|-|
-| 0x0B           | SUB @0x1f,ACC   |  |
-| 0x           | SUB @R,ACC      |S|
+| 0x0B0f           | SUB ACC,0xf     | Subtract from ACC the operand n and store the result in ACC |
+| 0x1B00           | SUB ACC,RA      | Subtract from ACC the Register RA and store the result in ACC |
+| 0x2B00           | SUB ACC,RB      | Subtract from ACC the Register RA and store the result in ACC |
+| 0x3B9a           | SUB ACC,@0x9a   | Subtract from ACC the RAM address. In this case, the RAM <br> address = RC:9:a |
+| 0x7B00           | SUB ACC,@R      | Subtract from ACC the RAM address. In this case, the RAM <br> address = RC:RB:RA |
 
-The Instruction Word, for example, for STW @0x1f,ACC is coded as,
+The Instruction Word, for example, for SUB ACC,RB is coded as,
 ```asm
-0x
-  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 
-  ┆┆└───> Second Nibble => MAddr[b7:b4] = 
-  ┆└────> Third Nibble => MICRO[b11:b8] = 
-  └─────> Most significant Nibble => HiNB[b15:b12] = 0
+0x2B00
+  ┆┆┆└──> Least significant Nibble => Operand[b3:b0] = 0
+  ┆┆└───> Second Nibble => MAddr[b7:b4] = 0
+  ┆└────> Third Nibble => MICRO[b11:b8] = B
+  └─────> Most significant Nibble => HiNB[b15:b12] = 2
 ```
 Also, the instruction word (in binary) to be manually programmed into MikroLeo using physical switches is,
 ```asm
-0000 1010 0001 1111
-  ┆    ┆    ┆    └──> Operand = 
-  ┆    ┆    └───────> MAddr =  (For this instruction, it doesn't matter)
-  ┆    └────────────> MICRO =  (OPCode)
-  └─────────────────> HiNB = 0 (MICRO2_IN = 0, AMODE = 0, MOD = 0)
+0010 1011 0000 0000
+  ┆    ┆    ┆    └──> Operand = 0 (For this instruction, it doesn't matter)
+  ┆    ┆    └───────> MAddr = 0 (For this instruction, it doesn't matter)
+  ┆    └────────────> MICRO = B (OPCode)
+  └─────────────────> HiNB = 2 (MICRO2_IN = 0, AMODE = 0, MOD = 2)
 ```
 
 
