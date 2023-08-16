@@ -997,8 +997,8 @@ Likewise, for the software, the GNU GPL license was used.
 
 ## Contact ##
 
-***Note:*** If you have any questions, please consider opening an issue first, as your question may be helpful to others.  
-[email](mailto:mikroleo.cpu@gmail.com)
+***Note:*** If you have any questions, please consider opening a discussion first, as your question may be helpful to others. If you want to report a bug, please open an issue.  
+You can also contact me via email: [mikroleo.cpu@gmail.com](mailto:mikroleo.cpu@gmail.com)
 
 ## Visitor count
 <!-- This is a comment ![Visitor Count](https://profile-counter.glitch.me/{edson-acordi}/count.svg)
