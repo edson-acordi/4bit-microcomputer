@@ -71,7 +71,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 - 3 execution modes:
    * step by step
    * 3MHz (precise time base)
-   * adjustable clock speed ( $\approx$ 1 Hz - 200 Hz)
+   * adjustable - low clock speed ( $\approx$ 1 Hz - 200 Hz)
 - No MPU/MCU or complex chips
 - No microcode
 - Indirect addressing to facilitate the implementation of subroutines
