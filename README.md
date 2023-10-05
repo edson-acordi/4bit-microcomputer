@@ -974,6 +974,10 @@ I dedicate this project to my beloved son, Leonardo Pimentel Acordi.
 
 - All people from the Github community and externals who support this project.
 
+# Sponsor #
+Starting with revision 1.02A (which will be finalized soon) MikroLeo has gained a sponsor for the printed circuit board, the PCBWAY company, a serious company that produces high-quality PCBs.  
+https://www.pcbway.com/
+
 # Authors #
 
 >Edson Junior Acordi  
