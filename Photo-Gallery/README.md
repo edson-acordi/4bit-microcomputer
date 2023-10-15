@@ -18,4 +18,7 @@
 <img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/295b0a52-9b02-4270-a238-3d60fdfb3153" width="50%" height="50%" rotate="90">  
 <img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/a850945f-c75f-4746-a0a2-2b9d556ac821" width="50%" height="50%" rotate="90">  
 
+## **Simposium:** ##
+- Presentation at Simproin 2022
+<img src="https://github.com/edson-acordi/4bit-microcomputer/assets/60040866/22f2e464-1f87-45e2-bfe0-893cd7fbc5d9" width="50%" height="50%" rotate="90"> 
 
