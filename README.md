@@ -116,7 +116,8 @@ Below is more detailed information about the instruction word,
 
 <img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="55%" height="55%">  
 
-### ###
+### Instruction Set Description ### 
+
 **LDI - Load with Immediate**  
 Description: Loads the operand value into a register.  
 Registers: ACC, RA, RB or RC  
