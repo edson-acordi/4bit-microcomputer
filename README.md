@@ -658,8 +658,9 @@ Flags can only be checked by conditional jump instructions (JPC and JPZ).
 
 Example of how CF and ZF are Set:  
 ```asm
-LDI ACC,1  
-ADD ACC,0xF  
+LDI ACC,1    ;Load the operand value into the ACC accumulator.
+ADD ACC,0xF  ;Performs the addition between the accumulator and the operand and stores the
+             ;result in the accumulator.
 ```
 This code does it,
 ```
