@@ -927,6 +927,7 @@ PCB (KiCad 3D viewer):
 To carry out the project, the [KiCad](https://www.kicad.org/) software was used, an excellent and powerful free and open-source tool for printed circuit board (PCB) designers.  
 Size: 295.9mm x 196.9mm  
 <img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
+
 A simple seven-segment display interface (the PCB has a layout thought for educational purposes, that's why it got big),  
 Size: 88.65mm x 141.mm  
 <img src="https://user-images.githubusercontent.com/60040866/198721799-a761d863-84b6-472f-9a41-5be4505674a5.png" width="25%" height="25%">
