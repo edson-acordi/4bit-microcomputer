@@ -26,7 +26,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 
 ***Support this project!***  
 ***Help to promote and disseminate the knowledge.***  
-**2020-2023 - MikroLeo Authors**  
+*Copyright (C) 2020-2023 MikroLeo Authors*  
 
 ---
 
