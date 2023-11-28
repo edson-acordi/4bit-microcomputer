@@ -87,6 +87,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 
 # MikroLeo Architecture #
 Note that some buffers are used to allow viewing the contents of registers at any time, since this project is mainly intended for educational purposes.  
+Reset Vector: 0x000  
 
 <img src="https://user-images.githubusercontent.com/60040866/209601697-8584d494-3a72-4378-b84d-aec4b7549ddc.png" width="90%" height="90%">
 
