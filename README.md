@@ -75,6 +75,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
    * adjustable - low clock speed ( $\approx$ 1 Hz - 200 Hz)
 - No MPU/MCU or complex chips
 - No microcode
+- No stack
 - Indirect addressing to facilitate the implementation of subroutines
 - Program memory implemented with RAM to easy programming
 - It can be programmed using physical input switches or via Arduino/Esp32
