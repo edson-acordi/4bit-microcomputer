@@ -39,8 +39,7 @@ For the next steps, an important thing is to make good documentation for MikroLe
 
 3-[Download the schematic diagram (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Kicad-files/MikroLeo/MikroLeo_v0.1901_Rev1.01A_sch.pdf "download")  
 
-4-[Download Bill of Materials (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/MikroLeo_v0.1901_Rev1.01A_BOM.pdf "download")  
-&nbsp;&nbsp; └─>[Components list made by @vguttmann at the Mouser Electronics store](https://www.mouser.de/ProjectManager/ProjectDetail.aspx?State=EDIT&ProjectGUID=436f56c7-ebe0-469b-b287-6e751369f9cc)
+4-[Download Bill of Materials (pdf file)](https://github.com/edson-acordi/4bit-microcomputer/raw/master/Docs/MikroLeo_v0.1901_Rev1.01A_BOM.pdf "download")  &nbsp;
 
 ---
 
