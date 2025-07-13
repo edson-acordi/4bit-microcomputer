@@ -1,7 +1,7 @@
 <img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test-96%25-green>  <img src=https://img.shields.io/badge/Hardware%20License-CERN--OHL--S-brightgreen>  <img src=https://img.shields.io/badge/Software%20License-GNU%20GPL-ff0000>  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20(you liked OR want to suppport)&style=style=flat&color=9933FF" alt="Star Badge">  
 
 #  MikroLeo #
-<img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="12%" height="12%" align="left">  
+<img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="100" align="left">  
 <br />
 <br />
 
@@ -89,14 +89,14 @@ For the next steps, an important thing is to make good documentation for MikroLe
 Note that some buffers are used to allow viewing the contents of registers at any time, since this project is mainly intended for educational purposes.  
 Reset Vector: 0x000  
 
-<img src="https://user-images.githubusercontent.com/60040866/209601697-8584d494-3a72-4378-b84d-aec4b7549ddc.png" width="90%" height="90%">
+<img src="https://user-images.githubusercontent.com/60040866/209601697-8584d494-3a72-4378-b84d-aec4b7549ddc.png" width="975">
 
 
 # The MikroLeo Instruction Set #
 
 Although MikroLeo has only 20 instructions, using the AMODE bit (b14) and the modifier bits (b13:b12), it is possible to encode 64 combinations of instructions, as can be seen below.
 
-<img src="https://user-images.githubusercontent.com/60040866/209602107-249cf7d2-7620-4bca-998e-eca0196f1bd0.png" width="90%" height="90%">  
+<img src="https://user-images.githubusercontent.com/60040866/209602107-249cf7d2-7620-4bca-998e-eca0196f1bd0.png" width=975>  
 
 ## Instruction Set explanation and examples ##
 
@@ -116,7 +116,7 @@ $\text{\small\textcolor{brown}{- Note: b15 = bit15 ... b0 = bit0}}$
 
 Below is more detailed information about the instruction word,  
 
-<img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="55%" height="55%">  
+<img src="https://user-images.githubusercontent.com/60040866/202838098-64f25d65-caab-41fb-b613-8623593456ad.png" width="600">  
 
 ### Instruction Set Description ### 
 
@@ -920,22 +920,22 @@ A simple program to initialize an LCD.
 
 Simulation of the MikroLeo circuit (Made with "Digital"):  
 [Digital](https://github.com/hneemann/Digital) is free, open source and cross-platform software with a nice interface for digital logic design and circuit simulation.
-<img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="100%" height="100%">
+<img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="975">
 
 Breadboard:  
-<img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="40%" height="40%">  
+<img src="https://user-images.githubusercontent.com/60040866/166626556-bd559537-f371-4d85-87b8-ae23018d6fd7.jpg" width="975">  
 
 PCB (KiCad 3D viewer):  
 To carry out the project, the [KiCad](https://www.kicad.org/) software was used, an excellent and powerful free and open-source tool for printed circuit board (PCB) designers.  
 Size: 295.9mm x 196.9mm  
-<img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="60%" height="60%">  
+<img src="https://user-images.githubusercontent.com/60040866/166627152-4c3770eb-8091-40ed-be2d-034289695b60.png" width="975">  
 
 A simple seven-segment display interface (the PCB has a layout thought for educational purposes, that's why it got big),  
 Size: 88.65mm x 141.mm  
-<img src="https://user-images.githubusercontent.com/60040866/198721799-a761d863-84b6-472f-9a41-5be4505674a5.png" width="25%" height="25%">
+<img src="https://user-images.githubusercontent.com/60040866/198721799-a761d863-84b6-472f-9a41-5be4505674a5.png" width="300">
 
 PCB Prototype:  
-<img src="https://user-images.githubusercontent.com/60040866/166628285-47b3ee24-fd4e-49f8-9bca-21af1cec307d.jpg" width="55%" height="55%">  
+<img src="https://user-images.githubusercontent.com/60040866/166628285-47b3ee24-fd4e-49f8-9bca-21af1cec307d.jpg" width="975">  
 
 -------------------------------------------
 
