@@ -14,9 +14,9 @@ All text that comes before : is a Label that will be converted into an address.
 
 The assembler is not case-sensitive, so, for example, ACC is equal to AcC.  
 
-Constants could be defined by the directive #define, for example, #define Const1 $0  
+Constants could be defined by the directive #DEFINE, for example, #DEFINE Const1 $0  
 
-In the same way, to define a hexadecimal constant, #define Const2 $0xA  
+In the same way, to define a hexadecimal constant, #DEFINE Const2 $0xA  
 
 Note that the $ symbol must be used to define a constant.  
 
