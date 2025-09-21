@@ -919,7 +919,9 @@ A simple program to initialize an LCD.
 # Pictures #
 
 Simulation of the MikroLeo circuit (Made with "Digital"):  
-[Digital](https://github.com/hneemann/Digital) is free, open source and cross-platform software with a nice interface for digital logic design and circuit simulation.
+[Digital](https://github.com/hneemann/Digital/releases/download/v0.29/Digital.zip) is free, open source and cross-platform software with a nice interface for digital logic design and circuit simulation.
+* Note: For some reason, the author of Digital changed something in the source code after v0.29 that does not work with the MikroLeo_v0.19.dig.
+However, MikroLeo_v0.19.dig works fine with Digital v0.29 (and problably with earlier version).
 <img src="https://user-images.githubusercontent.com/60040866/170560291-f0a1727e-c2dd-46ce-8c69-752019464398.png" width="975">
 
 Breadboard:  
