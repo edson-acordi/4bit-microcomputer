@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test-96%25-green>  <img src=https://img.shields.io/badge/Hardware%20License-CERN--OHL--S-brightgreen>  <img src=https://img.shields.io/badge/Software%20License-GNU%20GPL-ff0000>  <img src=https://img.shields.io/badge/If%20you%20like%20or%20want%20to%20support-⭐-green>
+<img src=https://img.shields.io/badge/MikroLeo%20Hardware%20Test-96%25-green>  <img src=https://img.shields.io/badge/Hardware%20License-CERN--OHL--S-brightgreen>  <img src=https://img.shields.io/badge/Software%20License-GNU%20GPL-ff0000>  <img src=https://img.shields.io/badge/If%20you%20liked%20or%20want%20to%20support-⭐-green>
 
 #  MikroLeo #
 <img src="https://user-images.githubusercontent.com/60040866/170414182-473c82fa-b765-4346-8646-fb2904b4dfb3.png" width="100" align="left">  
