@@ -92,9 +92,11 @@ Reset Vector: 0x000
 
 # The MikroLeo Instruction Set #
 
-Although MikroLeo has only 20 instructions, using the AMODE bit (b14) and the modifier bits (b13:b12), it is possible to encode 64 combinations of instructions, as can be seen below.
+Although MikroLeo has only 20 instructions, using the AMODE bit (b14) and the modifier bits (b13:b12), it is possible to encode 65 combinations of instructions, as can be seen below.  
 
-<img src="https://user-images.githubusercontent.com/60040866/209602107-249cf7d2-7620-4bca-998e-eca0196f1bd0.png" width=975>  
+<img src="https://github.com/user-attachments/assets/8355563c-9c7a-4ec2-9178-49ec835901df" width=975> 
+
+<!-- This is a comment -->
 
 ## Instruction Set explanation and examples ##
 
