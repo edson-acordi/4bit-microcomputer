@@ -32,7 +32,7 @@
 ; =======================================================
 
 INI:
-; do anything ...
+; do anything ... (main program)
 
 ; ---- Save Context (ACC, RA e RB) ----
 LDI RC, STACK_ADDR ;High Stack address [11:8]
@@ -92,4 +92,5 @@ LDR RC
 ; Returns from the Subroutine (RET)
 JPI @R ;Returns to address RET0
 ; ========================================================
+
 
