@@ -72,7 +72,7 @@ LDW ACC, @0x00 ;Get the content of ACC
 
 ; Continue executing the main program’s instructions after the subroutine returns
 ; ...
-LDI RC, >INI ;Obtém o endereço alto do label INI [11:8]
+LDI RC, >INI ;Get the high address from the INI label [11:8]
 JPI INI
 
 ; ========================================================
@@ -92,5 +92,6 @@ LDR RC
 ; Returns from the Subroutine (RET)
 JPI @R ;Returns to address RET0
 ; ========================================================
+
 
 
