@@ -653,7 +653,7 @@ Also, the instruction word (in binary) to be manually programmed into MikroLeo u
 `RC` - 4 bit Special purpose Register used for addressing.  
 
 **- Two Flags**  
-Flags can only be checked by conditional jump instructions (JPC and JPZ).  
+Flags can only be checked by conditional branches instructions (JPC and JPZ).  
 
 `CF` - Carry Flag - It is Set (CF=1) by ADD Instruction if it produces a carry or by SUB/CMP instruction if it results in a borrow.  
 `ZF` - Zero Flag - It is affected by operations that modify the contents of the ACC and by CMP instruction. It is Set (ZF=1) if the result of the last operation was zero.    
