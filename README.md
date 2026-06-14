@@ -25,7 +25,7 @@ It is a fully open-source hardware and software project that can be built at hom
 For the next steps, an important thing is to make good documentation for MikroLeo!
 
 ***Support this project!***  
-***Help to promote and disseminate the knowledge.***  
+***Help to promote and spread the knowledge.***  
 *Copyright (C) 2020-2026 MikroLeo Devs*  
 
 ---
