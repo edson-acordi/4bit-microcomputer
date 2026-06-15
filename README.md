@@ -971,6 +971,9 @@ https://www.megaprocessor.com/
 http://www.mycpu.eu/  
 https://minnie.tuhs.org/Programs/CrazySmallCPU/index.html  
 
+I was impressed by the simplicity with which Alejandro Alomar (sinaptec) explained the design of a 4-bit computer.  
+And that was the main reason that led me to start this project!
+
 # Dedication #
 I dedicate this project to my beloved son, Leonardo Pimentel Acordi.  
 
