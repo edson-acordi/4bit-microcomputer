@@ -43,7 +43,7 @@ LDA RB
 STW @0x02, ACC ;Save the contents of RB to the Stack
 ; ----------------------------------------
 
-; ---- Salva Return Address (PUSH PC) ----
+; ---- Save Return Address (PUSH PC) ----
 LDI ACC, ]RET0 ;Get the low address [3:0]
 STW @0x03, ACC
 LDI ACC, <RET0 ;Get the medium address [7:4]
